@@ -1,10 +1,11 @@
 <template>
    <header
-      class="w-full h-20 fixed top-0 left-0 right-0 z-50 transition"
+      class="w-full h-20 fixed top-0 left-0 right-0 z-50 transition max-md:!bg-transparent max-md:!shadow-none"
       :class="{ 'bg-transparent': !isFolded, 'bg-white shadow-md': isFolded }"
    >
+      <!-- Desktop Navbar -->
       <nav
-         class="w-full h-full max-w-6xl mx-auto px-6 flex items-center justify-start gap-x-12"
+         class="w-full h-full max-w-6xl mx-auto px-6 flex items-center justify-start gap-x-12 max-lg:gap-x-8 flex-wrap max-md:hidden"
       >
          <a
             class="h-auto uppercase font-mono font-semibold transition"
@@ -23,7 +24,7 @@
             target="_blank"
             :href="x.href"
             :title="x.title"
-            class="text-lg"
+            class="text-lg max-lg:text-base"
             :class="{
                'text-gray-600 hover:text-gray-800': isFolded,
                'text-white hover:text-gray-200': !isFolded,
@@ -31,6 +32,51 @@
          >
             <i :class="x.icon" />
          </a>
+      </nav>
+      <!-- Mobile Navbar -->
+      <button
+         href="#"
+         class="md:hidden absolute z-[100] top-8 right-8 h-10 w-10 rounded-md bg-white flex items-center justify-center"
+         @click="() => (isMobileNavOpen = !isMobileNavOpen)"
+      >
+         <i
+            class="fas text-lg"
+            :class="{
+               'fa-times': isMobileNavOpen,
+               'fa-bars': !isMobileNavOpen,
+            }"
+         />
+      </button>
+      <nav
+         class="md:hidden fixed inset-0 w-screen h-screen bg-white z-[75] flex flex-col justify-center items-center gap-4 transition"
+         :class="{
+            'translate-x-full': !isMobileNavOpen,
+         }"
+      >
+         <a
+            class="h-auto font-mono font-semibold transition text-gray-600 hover:text-gray-800"
+            v-for="entry of NavEntries"
+            :href="entry.href"
+            @click="closeMobileNav"
+         >
+            <i class="fas fa-chevron-right text-xs" />
+            {{ entry.title }}
+            <i class="fas fa-chevron-left text-xs" />
+         </a>
+         <div class="mt-4">
+            <a
+               v-for="x of SocialMediaEntries"
+               target="_blank"
+               :href="x.href"
+               :title="x.title"
+               class="text-lg text-gray-600 hover:text-gray-800"
+               :class="{
+                  'ml-8': SocialMediaEntries.indexOf(x),
+               }"
+            >
+               <i :class="x.icon" />
+            </a>
+         </div>
       </nav>
    </header>
 </template>
@@ -89,6 +135,12 @@ const SocialMediaEntries: readonly SocialMediaEntry[] = [
 ];
 
 const isFolded = ref<boolean>(false);
+
+const isMobileNavOpen = ref<boolean>(false);
+
+const closeMobileNav = () => {
+   isMobileNavOpen.value = false;
+};
 
 const onScroll = (e: Event) => {
    const threshold = 30;

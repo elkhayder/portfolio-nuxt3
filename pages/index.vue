@@ -1,6 +1,7 @@
 <template>
    <IndexPageIntroduction />
    <IndexPageEducation />
+   <IndexPageSkills />
 </template>
 
 <script setup lang="ts"></script>

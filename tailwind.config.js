@@ -16,6 +16,9 @@ module.exports = {
             mono: ['"Roboto Mono"', "monospace"],
             sans: ['"Roboto Flex"', "sans-serif"],
          },
+         colors: {
+            accent: colors.orange,
+         },
       },
    },
    plugins: [],

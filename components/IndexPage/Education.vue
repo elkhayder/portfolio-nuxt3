@@ -1,12 +1,10 @@
 <template>
-   <section id="education" class="w-full max-w-6xl mx-auto px-6 py-16">
-      <h2 class="text-lg font-mono uppercase font-bold text-gray-500 mb-6">
-         Education
-      </h2>
-      <ol class="relative border-l border-gray-400">
-         <li class="mb-10 ml-4">
+   <section id="education" class="pt-16">
+      <h2 class="subtitle">Education</h2>
+      <ol class="relative border-l border-accent-600">
+         <li class="mb-10 ml-6">
             <div
-               class="absolute w-3 h-3 bg-gray-400 rounded-full mt-1.5 -left-1.5 border border-white"
+               class="absolute w-3 h-3 bg-accent-600 rounded-full mt-1.5 -left-1.5 border border-white"
             />
             <h6
                class="mb-2 text-sm font-normal leading-none text-gray-700"
@@ -38,9 +36,9 @@
                </a>
             </p>
          </li>
-         <li class="mb-10 ml-4">
+         <li class="mb-10 ml-6">
             <div
-               class="absolute w-3 h-3 bg-gray-400 rounded-full mt-1.5 -left-1.5 border border-white"
+               class="absolute w-3 h-3 bg-accent-600 rounded-full mt-1.5 -left-1.5 border border-white"
             />
             <h6
                class="mb-2 text-sm font-normal leading-none text-gray-700"
@@ -71,9 +69,9 @@
                </a>
             </p>
          </li>
-         <li class="mb-10 ml-4">
+         <li class="mb-10 ml-6">
             <div
-               class="absolute w-3 h-3 bg-gray-400 rounded-full mt-1.5 -left-1.5 border border-white"
+               class="absolute w-3 h-3 bg-accent-600 rounded-full mt-1.5 -left-1.5 border border-white"
             />
             <h6
                class="mb-2 text-sm font-normal leading-none text-gray-700"
