@@ -1,9 +1,9 @@
 <template>
    <main class="pt-20">
       <div
-         class="w-full max-w-6xl mx-auto p-6 flex max-sm:flex-col-reverse gap-12 max-sm:gap-6 text-white font-mono"
+         class="w-full max-w-6xl mx-auto p-6 max-sm:pb-0 flex max-sm:flex-col-reverse gap-12 max-sm:gap-6 text-white font-mono"
       >
-         <div class="w-full max-w-xs relative max-sm:mx-auto">
+         <div class="w-full max-w-xs relative max-sm:mx-auto max-sm:-mb-10">
             <img
                src="@/assets/images/faceshot.jpg"
                alt="EL KHAYDER's Image"
