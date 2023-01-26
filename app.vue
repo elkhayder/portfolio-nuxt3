@@ -1,4 +1,5 @@
 <template>
+   <LoadingScreen />
    <Header />
    <NuxtPage />
    <Footer />
