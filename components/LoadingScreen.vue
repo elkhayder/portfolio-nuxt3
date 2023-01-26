@@ -1,5 +1,10 @@
 <template>
-   <div id="overlay" class="overlay" :class="{ loaded: isLoaded }">
+   <div
+      v-if="isShown"
+      id="overlay"
+      class="overlay"
+      :class="{ loaded: isLoaded }"
+   >
       <div class="overlayDoor" />
       <div class="overlayContent">
          <div class="loader">
@@ -9,6 +14,7 @@
    </div>
 </template>
 <script setup lang="ts">
+const isShown = ref<boolean>(true);
 const isLoaded = ref<boolean>(false);
 
 const onLoad = () => {
@@ -18,6 +24,9 @@ const onLoad = () => {
 
 onMounted(() => {
    onLoad();
+   setTimeout(() => {
+      isShown.value = false;
+   }, 500 + 700);
    //    window.onload = onLoad;
    //    window.addEventListener("load", onLoad);
 });
