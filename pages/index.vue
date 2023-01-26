@@ -2,6 +2,7 @@
    <IndexPageIntroduction />
    <IndexPageEducation />
    <IndexPageSkills />
+   <IndexPageTestimonials />
 </template>
 
 <script setup lang="ts"></script>

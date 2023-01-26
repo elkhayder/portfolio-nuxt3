@@ -28,7 +28,7 @@ a {
 }
 
 section {
-   @apply w-full max-w-6xl mx-auto p-6;
+   @apply w-full max-w-6xl mx-auto py-16 px-6;
 }
 
 .subtitle {
@@ -40,4 +40,6 @@ body {
    &.loaded {
       overflow: auto;
    }
+
+   // cursor: none;
 }

@@ -1,6 +1,6 @@
 <template>
-   <section id="education" class="pt-16">
-      <h2 class="subtitle">Education</h2>
+   <section id="education" class="pt-32">
+      <h3 class="subtitle">Education</h3>
       <ol class="relative border-l border-accent-600">
          <li class="mb-10 ml-6">
             <div
@@ -69,7 +69,7 @@
                </a>
             </p>
          </li>
-         <li class="mb-10 ml-6">
+         <li class="ml-6">
             <div
                class="absolute w-3 h-3 bg-accent-600 rounded-full mt-1.5 -left-1.5 border border-white"
             />

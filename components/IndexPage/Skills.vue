@@ -1,14 +1,17 @@
 <template>
    <section>
-      <h2 class="subtitle">Skills</h2>
+      <h3 class="subtitle">Skills</h3>
       <div
          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-sm:gap-x-8"
       >
          <div v-for="skill of SkillEntries" class="flex-[0_1_30%]">
             <div class="text-sm font-mono text-gray-700 flex justify-between">
                <span class="font-medium">{{ skill.title }}:</span>
-               <span class="font-bold italic text-accent-600">
-                  {{ skill.level }}
+               <span
+                  class="font-bold italic text-accent-600"
+                  :title="ProficiencyLevels[skill.level - 1][1]"
+               >
+                  {{ ProficiencyLevels[skill.level - 1][0] }}
                </span>
             </div>
             <div class="mt-3 flex flex-wrap gap-4">
@@ -34,9 +37,20 @@
 <script setup lang="ts">
 type Skill = {
    title: string;
-   level: "Expert" | "Advanced" | "Intermediate" | "Beginner";
+   level: 1 | 2 | 3 | 4;
    technologies: readonly Technology[];
 };
+
+// 1 - Fundamental Awareness (basic knowledge)
+// 2 - Novice (limited experience)
+// 3 - Intermediate (practical application)
+// 4 - Advanced (applied theory)
+const ProficiencyLevels = [
+   ["Fundamental Awareness", "Basic knowledge"],
+   ["Novice", "Limited experience"],
+   ["Intermediate", "Practical application"],
+   ["Advanced", "Applied theory"],
+] as const;
 
 type Technology = {
    name: string;
@@ -53,7 +67,7 @@ const linux: Technology = {
 const SkillEntries: readonly Skill[] = [
    {
       title: "Frontend development",
-      level: "Advanced",
+      level: 4,
       technologies: [
          {
             name: "HTML",
@@ -109,7 +123,7 @@ const SkillEntries: readonly Skill[] = [
    },
    {
       title: "Backend development",
-      level: "Advanced",
+      level: 4,
       technologies: [
          {
             name: "PHP",
@@ -151,7 +165,7 @@ const SkillEntries: readonly Skill[] = [
    },
    {
       title: "Embedded Systems",
-      level: "Intermediate",
+      level: 3,
       technologies: [
          {
             name: "C",
@@ -193,7 +207,7 @@ const SkillEntries: readonly Skill[] = [
    },
    {
       title: "Mobile development",
-      level: "Intermediate",
+      level: 2,
       technologies: [
          {
             name: "Dart",
@@ -213,8 +227,8 @@ const SkillEntries: readonly Skill[] = [
       ],
    },
    {
-      title: "UI/UX design",
-      level: "Beginner",
+      title: "UX/UI design",
+      level: 1,
       technologies: [
          {
             name: "Figma",

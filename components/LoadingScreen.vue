@@ -19,14 +19,15 @@ const isLoaded = ref<boolean>(false);
 
 const onLoad = () => {
    isLoaded.value = true;
-   document.body.classList.add("loaded");
+   setTimeout(() => {
+      isShown.value = false;
+      document.body.classList.add("loaded");
+   }, 500 + 800);
 };
 
 onMounted(() => {
    onLoad();
-   setTimeout(() => {
-      isShown.value = false;
-   }, 500 + 700);
+
    //    window.onload = onLoad;
    //    window.addEventListener("load", onLoad);
 });

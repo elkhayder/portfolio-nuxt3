@@ -1,0 +1,73 @@
+<template>
+   <div id="testimonials" class="bg bg-[length:60px_60px] bg-repeat">
+      <section class="text-center">
+         <figure class="max-w-screen-md mx-auto">
+            <img
+               src="@/assets/svg/quote.svg"
+               class="text-gray-400 h-14 mx-auto mb-3 bg-white p-3 pb-0"
+               alt="Quote' Icon"
+            />
+            <blockquote>
+               <p
+                  class="text-lg font-medium after:text-3xl after:text-gray-100 after:leading-7 before:text-3xl before:text-gray-100 before:leading-7 before:content-['“'] after:content-['”']"
+               >
+                  <span
+                     class="inline py-[0.25] px-2 bg-white text-black font-mono mx-2"
+                  >
+                     ... Zakaria has played a key role in the development of
+                     several robust and scalable applications that have exceeded
+                     our client's expectations... He is pleasure to work with,
+                     easy going, proactive in identifying and solving problems
+                     ...
+                  </span>
+               </p>
+            </blockquote>
+            <figcaption class="flex items-center justify-center mt-6 space-x-3">
+               <img
+                  class="w-8 h-8 rounded-full object-cover"
+                  src="@/assets/images/people/hunor_kerekes.jpg"
+                  alt="Hunor's profile picture"
+               />
+               <div
+                  class="flex items-center divide-x-2 divide-gray-400 text-sm"
+               >
+                  <div
+                     class="mr-3 px-1 font-medium text-gray-800 bg-white font-mono"
+                  >
+                     <a
+                        href="https://www.linkedin.com/in/hunorkerekes"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                     >
+                        Hunor Kerekes
+                     </a>
+                  </div>
+                  <div class="pl-3 text-sm font-light text-gray-100">
+                     Founder of
+                     <a
+                        href="https://kuko.studio"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                     >
+                        kuko.studio
+                     </a>
+                  </div>
+               </div>
+            </figcaption>
+         </figure>
+      </section>
+   </div>
+</template>
+
+<script setup lang="ts"></script>
+
+<style lang="scss" scoped>
+.bg {
+   $bgOpacity: 0.9;
+   background-image: url("@/assets/images/testimonials-bg.png"),
+      linear-gradient(
+         rgba(45, 45, 45, $bgOpacity),
+         rgba(45, 45, 45, $bgOpacity)
+      );
+}
+</style>
