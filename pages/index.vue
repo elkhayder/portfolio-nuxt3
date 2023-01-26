@@ -5,6 +5,10 @@
    <IndexPageTestimonials />
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+useHead({
+   title: "Home",
+});
+</script>
 
 <style lang="scss"></style>
