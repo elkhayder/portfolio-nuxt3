@@ -45,8 +45,8 @@ const onMouseMove = (e: MouseEvent) => {
    if (!element) return;
 
    isClickable.value =
-      element.getAttribute("onclick") != null ||
-      element.getAttribute("href") != null ||
+      // element.getAttribute("onclick") != null ||
+      // element.getAttribute("href") != null ||
       getComputedStyle(element).cursor == "pointer";
 };
 

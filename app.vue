@@ -14,11 +14,16 @@
       <Meta name="og:image:height" content="2994" />
       <Meta name="twitter:card" content="summary_large_image" />
    </Head>
+
+   <NuxtLayout>
+      <NuxtPage />
+   </NuxtLayout>
+
    <LoadingScreen />
-   <Header />
-   <NuxtPage />
-   <Footer />
-   <MouseFollower />
+
+   <LazyClientOnly>
+      <MouseFollower />
+   </LazyClientOnly>
 </template>
 
 <script lang="ts"></script>

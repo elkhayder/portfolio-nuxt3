@@ -1,7 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
    css: ["@/assets/style/main.scss"],
-   modules: ["@nuxt/content"],
+   modules: [
+      "@nuxt/content",
+      "@nuxtjs/i18n",
+      ["@funken-studio/sitemap-nuxt-3", { generateOnBuild: true }],
+   ],
    postcss: {
       plugins: {
          tailwindcss: {},
@@ -29,4 +33,19 @@ export default defineNuxtConfig({
          link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
       },
    },
+   i18n: {
+      baseUrl: "https://zelkhayder.me",
+      defaultLocale: "en",
+      locales: [
+         {
+            code: "en",
+            iso: "en-US",
+         },
+         {
+            code: "fr",
+            iso: "fr-FR",
+         },
+      ],
+   },
+   sitemap: { hostname: "https://zelkhayder.com", gzip: true },
 });

@@ -1,3 +1,20 @@
+<i18n>
+{
+   "en": {
+      "subtitle": "Web developer, Electronics engineering student",
+      "phone": "Phone",
+      "location": "Location",
+      "yo": "years old",
+   },
+   "fr": {
+      "subtitle": "Developpeur Web, et étudiant en ingenierie des Systèmes électroniques",
+      "phone": "Tel",
+      "location": "Localisation",
+      "yo": "ans",
+}
+}
+</i18n>
+
 <template>
    <a id="me" class="anchor" />
    <main class="pt-20">
@@ -13,22 +30,20 @@
          </div>
          <div>
             <h1 class="charta text-4xl font-bold">EL KHAYDER ZAKARIA</h1>
-            <h3 class="mt-2 mb-10">
-               Web developer, Electronics engineering student
-            </h3>
+            <h3 class="mt-2 mb-10">{{ t("subtitle") }}</h3>
             <dl>
                <dt>Age</dt>
                <dd>
-                  {{ diff_years(new Date(), new Date("2002-12-27")) }}
-                  years old
+                  {{ diffYears(new Date(), new Date("2002-12-27")) }}
+                  {{ t("yo") }}
                </dd>
-               <dt>Phone</dt>
+               <dt>{{ t("phone") }}</dt>
                <dd><a href="tel:+33745640961">+33 745 640961</a></dd>
                <dt>Email</dt>
                <dd>
                   <a href="mailto:zelkhayder@gmail.com">zelkhayder@gmail.com</a>
                </dd>
-               <dt>Location</dt>
+               <dt>{{ t("location") }}</dt>
                <dd>Strasbourg, France</dd>
             </dl>
          </div>
@@ -37,16 +52,9 @@
 </template>
 
 <script setup lang="ts">
-type Info = {
-   entry: string;
-   data: string;
-};
+import { diffYears } from "@/include/helpers";
 
-function diff_years(dt2: Date, dt1: Date) {
-   var diff = (dt2.getTime() - dt1.getTime()) / 1000;
-   diff /= 60 * 60 * 24;
-   return Math.abs(Math.round(diff / 365.25));
-}
+const { t } = useI18n();
 </script>
 
 <style lang="scss" scoped>
@@ -64,7 +72,7 @@ main {
 
 dl {
    dd {
-      @apply pl-32 my-4;
+      @apply pl-36 my-4;
    }
 
    dt {

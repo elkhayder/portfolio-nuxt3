@@ -1,3 +1,16 @@
+<i18n>
+   {
+      "en": {
+         "quote": "Zakaria has played a key role in the development of several robust and scalable applications that have exceeded our client's expectations... He is pleasure to work with, easy going, proactive in identifying and solving problems",
+         "founder_of": "Founder of",
+      },
+      "fr": {
+         "quote": "Zakaria a joué un rôle clé dans le développement de plusieurs applications robustes et évolutives qui ont dépassé les attentes de nos clients... Il est agréable à travailler avec et proactif dans l'identification et la résolution des problèmes.",
+         "founder_of": "Fondateur de"
+      }
+   }
+</i18n>
+
 <template>
    <a id="testimonials" class="anchor" />
    <div id="testimonials" class="bg bg-[length:60px_60px] bg-repeat py-8">
@@ -15,11 +28,7 @@
                   <span
                      class="inline py-[0.25] px-2 bg-white text-black font-mono mx-2"
                   >
-                     ... Zakaria has played a key role in the development of
-                     several robust and scalable applications that have exceeded
-                     our client's expectations... He is pleasure to work with,
-                     easy going, proactive in identifying and solving problems
-                     ...
+                     ... {{ t("quote") }} ...
                   </span>
                </p>
             </blockquote>
@@ -44,7 +53,7 @@
                      </a>
                   </div>
                   <div class="pl-3 text-sm font-light text-gray-100">
-                     Founder of
+                     {{ t("founder_of") }}
                      <a
                         href="https://kuko.studio"
                         target="_blank"
@@ -60,7 +69,9 @@
    </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { t } = useI18n();
+</script>
 
 <style lang="scss" scoped>
 .bg {
