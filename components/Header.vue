@@ -97,8 +97,8 @@ const NavEntries: readonly NavEntry[] = [
       href: "/#education",
    },
    {
-      title: "Experience",
-      href: "/#experience",
+      title: "Skills",
+      href: "/#skills",
    },
    {
       title: "Testimonials",

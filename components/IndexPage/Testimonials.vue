@@ -1,4 +1,5 @@
 <template>
+   <a id="testimonials" class="anchor" />
    <div id="testimonials" class="bg bg-[length:60px_60px] bg-repeat py-8">
       <section class="text-center">
          <figure class="max-w-screen-md mx-auto">

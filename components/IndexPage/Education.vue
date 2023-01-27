@@ -1,5 +1,6 @@
 <template>
-   <section id="education">
+   <a class="anchor" id="education" />
+   <section>
       <h3 class="subtitle">Education</h3>
       <ol class="relative border-l border-accent-600">
          <li class="mb-10 ml-6">

@@ -25,6 +25,10 @@ body,
 
 a {
    @apply hover:underline transition;
+
+   &.anchor {
+      @apply invisible relative block -top-24;
+   }
 }
 
 section {

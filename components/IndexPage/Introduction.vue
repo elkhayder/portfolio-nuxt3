@@ -1,4 +1,5 @@
 <template>
+   <a id="me" class="anchor" />
    <main class="pt-20">
       <div
          class="w-full max-w-6xl mx-auto p-6 max-sm:pb-0 flex max-sm:flex-col-reverse gap-12 max-sm:gap-6 text-white font-mono"

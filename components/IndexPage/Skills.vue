@@ -1,4 +1,5 @@
 <template>
+   <a id="skills" class="anchor" />
    <section>
       <h3 class="subtitle">Skills</h3>
       <div
