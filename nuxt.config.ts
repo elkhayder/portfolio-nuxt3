@@ -23,12 +23,8 @@ export default defineNuxtConfig({
                name: "viewport",
                content: "width=device-width, initial-scale=1",
             },
-            {
-               hid: "description",
-               name: "description",
-               content: "Full-Stack Web developer & Electronics engineer",
-            },
             { name: "format-detection", content: "telephone=yes" },
+            { hid: "og-type", property: "og:type", content: "website" },
          ],
          link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
       },

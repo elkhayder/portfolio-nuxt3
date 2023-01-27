@@ -12,7 +12,9 @@
          </div>
          <div>
             <h1 class="charta text-4xl font-bold">EL KHAYDER ZAKARIA</h1>
-            <h3 class="mt-2 mb-10">Web developer, Electronics engineer</h3>
+            <h3 class="mt-2 mb-10">
+               Web developer, Electronics engineering student
+            </h3>
             <dl>
                <dt>Age</dt>
                <dd>

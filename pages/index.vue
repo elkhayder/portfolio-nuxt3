@@ -2,6 +2,7 @@
    <IndexPageIntroduction />
    <IndexPageEducation />
    <IndexPageSkills />
+   <IndexPageSpokenLanguages />
    <IndexPageTestimonials />
 </template>
 

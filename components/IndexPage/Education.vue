@@ -1,5 +1,5 @@
 <template>
-   <section id="education" class="pt-32">
+   <section id="education">
       <h3 class="subtitle">Education</h3>
       <ol class="relative border-l border-accent-600">
          <li class="mb-10 ml-6">

@@ -35,10 +35,45 @@
 </template>
 
 <script setup lang="ts">
+import {
+   LanguageTechnology,
+   AdobeIllustrator,
+   AdobeXD,
+   Android,
+   Apache,
+   Arduino,
+   CLang,
+   CPP,
+   Css,
+   Dart,
+   EmbeddedC,
+   ExpressJs,
+   Figma,
+   Firebase,
+   Flutter,
+   Fritzing,
+   HTML,
+   JavaScript,
+   Laravel,
+   Linux,
+   Matlab,
+   MySQL,
+   NextJs,
+   NodeJs,
+   NuxtJs,
+   PHP,
+   RaspberryPI,
+   ReactJs,
+   Sass,
+   TailwindCss,
+   TypeScript,
+   VueJs,
+} from "~~/include/languages_technologies";
+
 type Skill = {
    title: string;
    level: 1 | 2 | 3 | 4;
-   technologies: readonly Technology[];
+   technologies: readonly LanguageTechnology[];
 };
 
 // 1 - Fundamental Awareness (basic knowledge)
@@ -52,200 +87,60 @@ const ProficiencyLevels = [
    ["Advanced", "Applied theory"],
 ] as const;
 
-type Technology = {
-   name: string;
-   image: string;
-   href: string;
-};
-
-const linux: Technology = {
-   name: "Linux",
-   image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
-   href: "https://en.wikipedia.org/wiki/Linux",
-};
-
 const SkillEntries: readonly Skill[] = [
    {
       title: "Frontend development",
       level: 4,
       technologies: [
-         {
-            name: "HTML",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-            href: "https://en.wikipedia.org/wiki/HTML",
-         },
-         {
-            name: "CSS",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-            href: "https://en.wikipedia.org/wiki/CSS",
-         },
-         {
-            name: "Sass",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sass/sass-original.svg",
-            href: "https://sass-lang.com/",
-         },
-         {
-            name: "TailwindCss",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
-            href: "https://tailwindcss.com/",
-         },
-         {
-            name: "JavaScript",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-            href: "https://en.wikipedia.org/wiki/JavaScript",
-         },
-         {
-            name: "TypeScript",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-            href: "https://www.typescriptlang.org/",
-         },
-         {
-            name: "VueJS",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
-            href: "https://vuejs.org/",
-         },
-         {
-            name: "NuxtJS",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nuxtjs/nuxtjs-original.svg",
-            href: "https://nuxt.com/",
-         },
-         {
-            name: "ReactJS",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-            href: "https://reactjs.org/",
-         },
-         {
-            name: "NextJS",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-            href: "https://nextjs.org/",
-         },
+         HTML,
+         Css,
+         Sass,
+         TailwindCss,
+         JavaScript,
+         TypeScript,
+         VueJs,
+         NuxtJs,
+         ReactJs,
+         NextJs,
       ],
    },
    {
       title: "Backend development",
       level: 4,
       technologies: [
-         {
-            name: "PHP",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
-            href: "https://www.php.net/",
-         },
-         {
-            name: "Laravel",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg",
-            href: "https://laravel.com/",
-         },
-         {
-            name: "MySQL",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
-            href: "https://www.mysql.com/",
-         },
-         {
-            name: "Firebase",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
-            href: "https://firebase.google.com/",
-         },
-         {
-            name: "NodeJS",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
-            href: "https://nodejs.org/",
-         },
-         {
-            name: "Express.js",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
-            href: "https://expressjs.com/",
-         },
-         {
-            name: "Apache",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apache/apache-original.svg",
-            href: "https://httpd.apache.org/",
-         },
-         linux,
+         PHP,
+         Laravel,
+         MySQL,
+         Firebase,
+         NodeJs,
+         ExpressJs,
+         Apache,
+         Linux,
       ],
    },
    {
       title: "Embedded Systems",
       level: 3,
       technologies: [
-         {
-            name: "C",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-original.svg",
-            href: "https://en.wikipedia.org/wiki/C_(programming_language)",
-         },
-         {
-            name: "C++",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
-            href: "https://en.wikipedia.org/wiki/C%2B%2B",
-         },
-         {
-            name: "Embedded C",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/embeddedc/embeddedc-original.svg",
-            href: "https://en.wikipedia.org/wiki/Embedded_C",
-         },
-         linux,
-         {
-            name: "Arduino",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg",
-            href: "https://www.arduino.cc/",
-         },
-         {
-            name: "RaspberryPi",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/raspberrypi/raspberrypi-original.svg",
-            href: "https://www.raspberrypi.com/",
-         },
-         {
-            name: "Fritzing",
-            image: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Fritzing_icon_%28new%29.png",
-            href: "https://fritzing.org/",
-         },
-         {
-            name: "Matlab",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matlab/matlab-original.svg",
-            href: "https://www.mathworks.com/products/matlab.html",
-         },
+         CLang,
+         CPP,
+         EmbeddedC,
+         Linux,
+         Arduino,
+         RaspberryPI,
+         Fritzing,
+         Matlab,
       ],
    },
    {
       title: "Mobile development",
       level: 2,
-      technologies: [
-         {
-            name: "Dart",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
-            href: "https://dart.dev/",
-         },
-         {
-            name: "Flutter",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
-            href: "https://flutter.dev/",
-         },
-         {
-            name: "Android",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg",
-            href: "https://www.android.com/",
-         },
-      ],
+      technologies: [Dart, Flutter, Android],
    },
    {
       title: "UX/UI design",
       level: 1,
-      technologies: [
-         {
-            name: "Figma",
-            image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg",
-            href: "https://www.figma.com/",
-         },
-         {
-            name: "Adobe Xd",
-            image: "https://upload.wikimedia.org/wikipedia/commons/c/c2/Adobe_XD_CC_icon.svg",
-            href: "https://en.wikipedia.org/wiki/Adobe_XD",
-         },
-         {
-            name: "Adobe Illustrator",
-            image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg",
-            href: "https://www.adobe.com/products/illustrator.html",
-         },
-      ],
+      technologies: [Figma, AdobeXD, AdobeIllustrator],
    },
 ] as const;
 </script>
