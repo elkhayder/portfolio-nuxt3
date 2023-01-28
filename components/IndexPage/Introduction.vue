@@ -1,18 +1,15 @@
-<i18n>
-{
-   "en": {
-      "subtitle": "Web developer, Electronics engineering student",
-      "phone": "Phone",
-      "location": "Location",
-      "yo": "years old",
-   },
-   "fr": {
-      "subtitle": "Developpeur Web, et étudiant en ingenierie des Systèmes électroniques",
-      "phone": "Tel",
-      "location": "Localisation",
-      "yo": "ans",
-}
-}
+<i18n lang="yaml">
+en:
+   subtitle: Web developer, Electronics engineering student
+   phone: Phone
+   location: Location
+   yo: years old
+
+fr:
+   subtitle: Developpeur Web, et étudiant en ingenierie des Systèmes électroniques
+   phone: Tel
+   location: Localisation
+   yo: ans
 </i18n>
 
 <template>
@@ -41,7 +38,9 @@
                <dd><a href="tel:+33745640961">+33 745 640961</a></dd>
                <dt>Email</dt>
                <dd>
-                  <a href="mailto:zelkhayder@gmail.com">zelkhayder@gmail.com</a>
+                  <a href="mailto:zelkhayder@gmail.com" class="text-ellipsis">
+                     zelkhayder@gmail.com
+                  </a>
                </dd>
                <dt>{{ t("location") }}</dt>
                <dd>Strasbourg, France</dd>

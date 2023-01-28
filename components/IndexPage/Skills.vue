@@ -1,7 +1,42 @@
+<i18n lang="yaml">
+en:
+   title: Skills
+   frontend: Front-End development
+   backend: Back-End development
+   embedded: Embedded Systems
+   mobile: Mobile development
+   ui_ux: UX/UI design
+   proficiency:
+      - - Fundamental Awareness
+        - Basic knowledge
+      - - Novice
+        - Limited experience
+      - - Intermediate
+        - Practical application
+      - - Advanced
+        - Applied theory
+
+fr:
+   title: Compétences
+   frontend: Développement Front-End
+   backend: Développement Back-End
+   embedded: Systèmes embarqués
+   mobile: Développement Mobile
+   ui_ux: Désign UX/UI
+   proficiency:
+      - - Connaissances de base
+        - Conscience fondamentale
+      - - Débutant
+        - Expérience limitée
+      - - Intermédiaire
+        - Application pratique
+      - - Avancé
+        - Théorie appliquée
+</i18n>
+
 <template>
-   <a id="skills" class="anchor" />
    <section>
-      <h3 class="subtitle">Skills</h3>
+      <h3 class="subtitle">{{ t("title") }}</h3>
       <div
          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-sm:gap-x-8"
       >
@@ -10,9 +45,9 @@
                <span class="font-medium">{{ skill.title }}:</span>
                <span
                   class="font-bold italic text-accent-600"
-                  :title="ProficiencyLevels[skill.level - 1][1]"
+                  :title="t(`proficiency.${skill.level - 1}.1`)"
                >
-                  {{ ProficiencyLevels[skill.level - 1][0] }}
+                  {{ t(`proficiency.${skill.level - 1}.0`) }}
                </span>
             </div>
             <div class="mt-3 flex flex-wrap gap-4">
@@ -71,6 +106,8 @@ import {
    VueJs,
 } from "~~/include/languages_technologies";
 
+const { t } = useI18n();
+
 type Skill = {
    title: string;
    level: 1 | 2 | 3 | 4;
@@ -81,16 +118,10 @@ type Skill = {
 // 2 - Novice (limited experience)
 // 3 - Intermediate (practical application)
 // 4 - Advanced (applied theory)
-const ProficiencyLevels = [
-   ["Fundamental Awareness", "Basic knowledge"],
-   ["Novice", "Limited experience"],
-   ["Intermediate", "Practical application"],
-   ["Advanced", "Applied theory"],
-] as const;
 
-const SkillEntries: readonly Skill[] = [
+const SkillEntries: Skill[] = [
    {
-      title: "Frontend development",
+      title: t("frontend"),
       level: 4,
       technologies: [
          HTML,
@@ -106,7 +137,7 @@ const SkillEntries: readonly Skill[] = [
       ],
    },
    {
-      title: "Backend development",
+      title: t("backend"),
       level: 4,
       technologies: [
          PHP,
@@ -120,7 +151,7 @@ const SkillEntries: readonly Skill[] = [
       ],
    },
    {
-      title: "Embedded Systems",
+      title: t("embedded"),
       level: 3,
       technologies: [
          CLang,
@@ -134,16 +165,16 @@ const SkillEntries: readonly Skill[] = [
       ],
    },
    {
-      title: "Mobile development",
+      title: t("mobile"),
       level: 2,
       technologies: [Dart, Flutter, Android],
    },
    {
-      title: "UX/UI design",
+      title: t("ui_ux"),
       level: 1,
       technologies: [Figma, AdobeXD, AdobeIllustrator],
    },
-] as const;
+];
 </script>
 
 <style lang="scss"></style>

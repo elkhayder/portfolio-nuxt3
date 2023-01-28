@@ -36,6 +36,8 @@ export default defineNuxtConfig({
    i18n: {
       baseUrl: "https://zelkhayder.me",
       defaultLocale: "en",
+      strategy: "prefix",
+      // langDir: "~/locales/",
       locales: [
          {
             code: "en",
@@ -46,6 +48,26 @@ export default defineNuxtConfig({
             iso: "fr-FR",
          },
       ],
+
+      vueI18n: {
+         legacy: false,
+         messages: {
+            en: {
+               titles: {
+                  home: "Home",
+                  resume: "Resume",
+                  testimonials: "Testimonials",
+               },
+            },
+            fr: {
+               titles: {
+                  home: "Accueil",
+                  resume: "CV",
+                  testimonials: "Témoignages",
+               },
+            },
+         },
+      },
    },
    sitemap: { hostname: "https://zelkhayder.com", gzip: true },
 });

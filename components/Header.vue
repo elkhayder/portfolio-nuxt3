@@ -7,19 +7,19 @@
       <nav
          class="w-full h-full max-w-6xl mx-auto px-6 flex items-center justify-start gap-x-12 max-lg:gap-x-8 flex-wrap max-md:hidden"
       >
-         <a
+         <NuxtLink
             class="h-auto uppercase font-mono font-semibold transition"
             :class="{
                'text-gray-600 hover:text-gray-800': isFolded,
                'text-white hover:text-gray-200': !isFolded,
             }"
             v-for="entry of NavEntries"
-            :href="entry.href"
+            :to="entry.href"
          >
-            {{ entry.title }}
-         </a>
+            {{ t(entry.title) }}
+         </NuxtLink>
          <div class="flex-1" />
-         <a
+         <NuxtLink
             v-for="x of SocialMediaEntries"
             target="_blank"
             :href="x.href"
@@ -31,7 +31,18 @@
             }"
          >
             <i :class="x.icon" />
-         </a>
+         </NuxtLink>
+         <span class="block w-0.5 h-8 bg-gray-400 opacity-50" />
+         <NuxtLink
+            class="text-base"
+            :class="{
+               'text-gray-600 hover:text-gray-800': isFolded,
+               'text-white hover:text-gray-200': !isFolded,
+            }"
+            :to="switchLocalePath(otherLocale)"
+         >
+            {{ otherLocale.toUpperCase() }}
+         </NuxtLink>
       </nav>
       <!-- Mobile Navbar -->
       <button
@@ -53,18 +64,18 @@
             'translate-x-full': !isMobileNavOpen,
          }"
       >
-         <a
+         <NuxtLink
             class="h-auto font-mono font-semibold transition text-gray-600 hover:text-gray-800"
             v-for="entry of NavEntries"
             :href="entry.href"
             @click="closeMobileNav"
          >
             <i class="fas fa-chevron-right text-xs" />
-            {{ entry.title }}
+            {{ t(entry.title) }}
             <i class="fas fa-chevron-left text-xs" />
-         </a>
+         </NuxtLink>
          <div class="mt-4">
-            <a
+            <NuxtLink
                v-for="x of SocialMediaEntries"
                target="_blank"
                :href="x.href"
@@ -75,62 +86,46 @@
                }"
             >
                <i :class="x.icon" />
-            </a>
+            </NuxtLink>
          </div>
+         <NuxtLink
+            class="text-lg mt-4 text-gray-600 hover:text-gray-800"
+            :to="switchLocalePath(otherLocale)"
+         >
+            {{ otherLocale.toUpperCase() }}
+         </NuxtLink>
       </nav>
    </header>
 </template>
 
 <script setup lang="ts">
+import { SocialMediaEntries } from "~~/include/misc";
+
+const { t, locale } = useI18n();
+const localePath = useLocalePath();
+const switchLocalePath = useSwitchLocalePath();
+
+const otherLocale = computed<string>(() =>
+   locale.value == "en" ? "fr" : "en"
+); // Works fine while there are only two locales: Fr, EN
+
 type NavEntry = {
    title: string;
    href: string;
 };
 
-const NavEntries: readonly NavEntry[] = [
+const NavEntries: NavEntry[] = [
    {
-      title: "Home",
-      href: "/#me",
+      title: "titles.home",
+      href: localePath("/") + "#me",
    },
    {
-      title: "Education",
-      href: "/#education",
+      title: "titles.resume",
+      href: localePath("/") + "#resume",
    },
    {
-      title: "Skills",
-      href: "/#skills",
-   },
-   {
-      title: "Testimonials",
-      href: "/#testimonials",
-   },
-   {
-      title: "Contact",
-      href: "/#contact",
-   },
-] as const;
-
-type SocialMediaEntry = {
-   icon: string;
-   title: string;
-   href: string;
-};
-
-const SocialMediaEntries: readonly SocialMediaEntry[] = [
-   {
-      icon: "fab fa-instagram",
-      href: "https://www.instagram.com/elkhayder.zakaria",
-      title: "Instagram",
-   },
-   {
-      icon: "fab fa-github",
-      href: "https://www.github.com/elkhayder",
-      title: "Github",
-   },
-   {
-      icon: "fab fa-linkedin",
-      href: "https://www.linkedin.com/in/elkhayderzakaria",
-      title: "LinkedIn",
+      title: "titles.testimonials",
+      href: localePath("/") + "#testimonials",
    },
 ];
 

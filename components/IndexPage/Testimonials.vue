@@ -1,14 +1,17 @@
-<i18n>
-   {
-      "en": {
-         "quote": "Zakaria has played a key role in the development of several robust and scalable applications that have exceeded our client's expectations... He is pleasure to work with, easy going, proactive in identifying and solving problems",
-         "founder_of": "Founder of",
-      },
-      "fr": {
-         "quote": "Zakaria a joué un rôle clé dans le développement de plusieurs applications robustes et évolutives qui ont dépassé les attentes de nos clients... Il est agréable à travailler avec et proactif dans l'identification et la résolution des problèmes.",
-         "founder_of": "Fondateur de"
-      }
-   }
+<i18n lang="yaml">
+en:
+   quote:
+      Zakaria has played a key role in the development of several robust and scalable
+      applications that have exceeded our client's expectations... He is pleasure to
+      work with, easy going, proactive in identifying and solving problems
+   founder_of: Founder of
+
+fr:
+   quote:
+      Zakaria a joué un rôle clé dans le développement de plusieurs applications
+      robustes et évolutives qui ont dépassé les attentes de nos clients... Il est agréable
+      à travailler avec et proactif dans l'identification et la résolution des problèmes.
+   founder_of: Fondateur de
 </i18n>
 
 <template>

@@ -19,6 +19,9 @@ module.exports = {
          colors: {
             accent: colors.orange,
          },
+         screens: {
+            xs: "380px",
+         },
       },
    },
    plugins: [],
