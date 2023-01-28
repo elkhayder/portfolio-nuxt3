@@ -69,5 +69,6 @@ export default defineNuxtConfig({
          },
       },
    },
+
    sitemap: { hostname: "https://zelkhayder.me", gzip: true },
 });

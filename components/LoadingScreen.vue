@@ -3,7 +3,7 @@
       v-if="isShown"
       id="overlay"
       class="overlay"
-      :class="{ loaded: isLoaded }"
+      :class="{ loaded: isLoaded, 'pointer-events-none': isLoaded }"
    >
       <div class="overlayDoor" />
       <div class="overlayContent">
@@ -20,7 +20,7 @@ const isLoaded = ref<boolean>(false);
 const onLoad = () => {
    isLoaded.value = true;
    setTimeout(() => {
-      isShown.value = false;
+      // isShown.value = false;
       document.body.classList.add("loaded");
    }, 500 + 800);
 };
