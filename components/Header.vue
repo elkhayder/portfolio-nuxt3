@@ -90,6 +90,7 @@
          </div>
          <NuxtLink
             class="text-lg mt-4 text-gray-600 hover:text-gray-800"
+            @click="closeMobileNav"
             :to="switchLocalePath(otherLocale)"
          >
             {{ otherLocale.toUpperCase() }}
