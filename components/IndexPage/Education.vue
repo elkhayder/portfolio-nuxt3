@@ -21,8 +21,8 @@ fr:
    ma: Maroc
    schools:
       - Faculté de physique et ingenierie
-      - Lycée Qualifiant Ibn Mandour
       - Ecole supérieure de Technologie
+      - Lycée Qualifiant Ibn Mandour
    degrees:
       - Licence en Systèmes Electroniques
       - Diplôme Universitaire Technique (DUT) en Electronique et Informatique Industrielle
