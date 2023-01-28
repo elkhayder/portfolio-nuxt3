@@ -10,7 +10,7 @@ fr:
    quote:
       Zakaria a joué un rôle clé dans le développement de plusieurs applications
       robustes et évolutives qui ont dépassé les attentes de nos clients... Il est agréable
-      à travailler avec et proactif dans l'identification et la résolution des problèmes.
+      à travailler avec et proactif dans l'identification et la résolution des problèmes
    founder_of: Fondateur de
 </i18n>
 
