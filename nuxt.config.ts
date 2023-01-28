@@ -12,11 +12,11 @@ export default defineNuxtConfig({
          autoprefixer: {},
       },
    },
-   nitro: {
-      prerender: {
-         routes: ["/sitemap.xml"],
-      },
-   },
+   // nitro: {
+   //    prerender: {
+   //       routes: ["/sitemap.xml"],
+   //    },
+   // },
    app: {
       head: {
          title: "Portfolio",
