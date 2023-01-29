@@ -189,3 +189,15 @@ export const AdobeIllustrator: LanguageTechnology = {
    image: "https://upload.wikimedia.org/wikipedia/commons/f/fb/Adobe_Illustrator_CC_icon.svg",
    href: "https://www.adobe.com/products/illustrator.html",
 };
+
+export const GoogleCloud: LanguageTechnology = {
+   name: "Google Cloud",
+   image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+   href: "https://cloud.google.com/",
+};
+
+export const Bluetooth: LanguageTechnology = {
+   name: "Bluetooth",
+   image: "https://upload.wikimedia.org/wikipedia/commons/d/da/Bluetooth.svg",
+   href: "https://www.bluetooth.com/",
+};

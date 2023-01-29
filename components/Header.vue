@@ -1,6 +1,6 @@
 <template>
    <header
-      class="w-full h-20 fixed top-0 left-0 right-0 z-50 transition max-md:!bg-transparent max-md:!shadow-none"
+      class="w-full h-20 fixed top-0 left-0 right-0 z-50 transition max-md:!bg-transparent max-md:!shadow-none print:hidden"
       :class="{ 'bg-transparent': !isFolded, 'bg-white shadow-md': isFolded }"
    >
       <!-- Desktop Navbar -->
@@ -123,6 +123,10 @@ const NavEntries: NavEntry[] = [
    {
       title: "titles.resume",
       href: localePath("/") + "#resume",
+   },
+   {
+      title: "titles.projects",
+      href: localePath("/") + "#projects",
    },
    {
       title: "titles.testimonials",

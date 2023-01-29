@@ -2,6 +2,8 @@
 
 <template>
    <IndexPageIntroduction />
+
+   <!-- Resume -->
    <section class="pb-0 mb-0">
       <a id="resume" class="anchor" />
       <h2 class="title">{{ t("titles.resume") }}</h2>
@@ -9,10 +11,20 @@
    <IndexPageEducation />
    <IndexPageSkills />
    <IndexPageSpokenLanguages />
+
+   <!-- Projects -->
+   <section class="pb-0 mb-0">
+      <a id="projects" class="anchor" />
+      <h2 class="title">{{ t("titles.projects") }}</h2>
+   </section>
+   <AcademicProjects />
+
    <IndexPageTestimonials />
 </template>
 
 <script setup lang="ts">
+import AcademicProjects from "~~/components/IndexPage/AcademicProjects.vue";
+
 const { t } = useI18n();
 
 useHead({

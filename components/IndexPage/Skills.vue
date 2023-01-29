@@ -61,7 +61,7 @@ fr:
                      :src="tech.image"
                      :alt="`${tech.name}'s Logo`"
                      :title="tech.name"
-                     class="max-h-10 max-w-10 w-full h-full hover:grayscale-0 transition rounded-md"
+                     class="max-h-10 max-w-10 w-full h-full object-contain hover:grayscale-0 transition rounded-md"
                   />
                </a>
             </div>

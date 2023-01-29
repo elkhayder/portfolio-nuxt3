@@ -1,3 +1,7 @@
+import { NuxtConfig } from "nuxt/config";
+import en from "./locales/en";
+import fr from "./locales/fr";
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
    css: ["@/assets/style/main.scss"],
@@ -35,40 +39,26 @@ export default defineNuxtConfig({
    },
    i18n: {
       baseUrl: "https://zelkhayder.me",
-      defaultLocale: "en",
-      strategy: "prefix",
       // langDir: "~/locales/",
       locales: [
          {
             code: "en",
             iso: "en-US",
+            // file: "en.yaml",
          },
          {
             code: "fr",
             iso: "fr-FR",
+            // file: "fr.yaml",
          },
       ],
-
       vueI18n: {
          legacy: false,
          messages: {
-            en: {
-               titles: {
-                  home: "Home",
-                  resume: "Resume",
-                  testimonials: "Testimonials",
-               },
-            },
-            fr: {
-               titles: {
-                  home: "Accueil",
-                  resume: "CV",
-                  testimonials: "Témoignages",
-               },
-            },
+            en,
+            fr,
          },
       },
    },
-
    sitemap: { hostname: "https://zelkhayder.me", gzip: true },
-});
+} as NuxtConfig);

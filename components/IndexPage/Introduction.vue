@@ -14,7 +14,7 @@ fr:
 
 <template>
    <a id="me" class="anchor" />
-   <main class="pt-20">
+   <main>
       <div
          class="w-full max-w-6xl mx-auto p-6 max-sm:pb-0 flex max-sm:flex-col-reverse gap-12 max-sm:gap-6 text-white font-mono"
       >
@@ -57,18 +57,6 @@ const { t } = useI18n();
 </script>
 
 <style lang="scss" scoped>
-main {
-   $bgOpacity: 0.8;
-   position: relative;
-   background-image: linear-gradient(
-         rgba(45, 45, 45, $bgOpacity),
-         rgba(45, 45, 45, $bgOpacity)
-      ),
-      url(@/assets/images/background-bw.jpg);
-   background-position: center;
-   background-size: cover;
-}
-
 dl {
    dd {
       @apply pl-36 my-4;
