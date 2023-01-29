@@ -39,6 +39,8 @@ export default defineNuxtConfig({
    },
    i18n: {
       baseUrl: "https://zelkhayder.me",
+      defaultLocale: "en",
+      strategy: "prefix",
       // langDir: "~/locales/",
       locales: [
          {
