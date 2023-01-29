@@ -50,7 +50,13 @@ fr:
                   {{ t(`proficiency.${skill.level - 1}.0`) }}
                </span>
             </div>
-            <div class="mt-3 flex flex-wrap gap-4">
+            <div
+               class="mt-3 grid gap-4"
+               style="
+                  grid-template-columns: repeat(auto-fit, 2.5rem);
+                  grid-gap: 1rem;
+               "
+            >
                <a
                   v-for="tech of skill.technologies"
                   :href="tech.href"
@@ -61,7 +67,7 @@ fr:
                      :src="tech.image"
                      :alt="`${tech.name}'s Logo`"
                      :title="tech.name"
-                     class="max-h-10 max-w-10 w-full h-full object-contain hover:grayscale-0 transition rounded-md"
+                     class="w-full object-contain hover:grayscale-0 transition rounded-md"
                   />
                </a>
             </div>
