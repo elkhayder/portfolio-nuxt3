@@ -201,3 +201,69 @@ export const Bluetooth: LanguageTechnology = {
    image: "https://upload.wikimedia.org/wikipedia/commons/d/da/Bluetooth.svg",
    href: "https://www.bluetooth.com/",
 };
+
+export const OfficeWord: LanguageTechnology = {
+   name: "Microsoft Office Word",
+   image: "https://upload.wikimedia.org/wikipedia/commons/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg",
+   href: "https://www.microsoft.com/en-us/microsoft-365/word",
+};
+
+export const OfficeExcel: LanguageTechnology = {
+   name: "Microsoft Office Excel",
+   image: "https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg",
+   href: "https://www.microsoft.com/en-us/microsoft-365/excel",
+};
+
+export const OfficePowerPoint: LanguageTechnology = {
+   name: "Microsoft Office PowerPoint",
+   image: "https://upload.wikimedia.org/wikipedia/commons/0/0d/Microsoft_Office_PowerPoint_%282019%E2%80%93present%29.svg",
+   href: "https://www.microsoft.com/en-us/microsoft-365/powerpoint",
+};
+
+export const LaTeX: LanguageTechnology = {
+   name: "LaTeX",
+   image: require("@/assets/icons/latex.png"),
+   href: "https://www.latex-project.org/",
+};
+
+export const Canva: LanguageTechnology = {
+   name: "Canva",
+   image: "https://upload.wikimedia.org/wikipedia/commons/0/08/Canva_icon_2021.svg",
+   href: "https://www.canva.com",
+};
+
+export const ProteusDesignSuite: LanguageTechnology = {
+   name: "Proteus Design Suite",
+   image: "https://upload.wikimedia.org/wikipedia/en/5/5a/Proteus_Design_Suite_Atom_Logo.png",
+   href: "https://www.labcenter.com/",
+};
+
+export const PhpMyAdmin: LanguageTechnology = {
+   name: "phpMyAdmin",
+   image: require("@/assets/icons/phpmyadmin-icon-5611.png"),
+   href: "https://www.phpmyadmin.net/",
+};
+
+export const Cloudflare: LanguageTechnology = {
+   name: "Cloudflare",
+   image: require("@/assets/icons/cloudflare.svg"),
+   href: "https://www.cloudflare.com",
+};
+
+export const Vercel: LanguageTechnology = {
+   name: "Vercel",
+   image: require("@/assets/icons/vercel.png"),
+   href: "https://vercel.com/",
+};
+
+export const Netlify: LanguageTechnology = {
+   name: "Netlify",
+   image: require("@/assets/icons/netlify-icon.svg"),
+   href: "https://www.netlify.com/",
+};
+
+export const Rust: LanguageTechnology = {
+   name: "Rust",
+   image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg",
+   href: "https://www.rust-lang.org/",
+};

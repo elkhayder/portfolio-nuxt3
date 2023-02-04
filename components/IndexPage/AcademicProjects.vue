@@ -1,9 +1,11 @@
 <i18n lang="yaml">
 en:
    title: Academic Projects
+   pfe: End-of-Study Project
 
 fr:
    title: Projets académiques
+   pfe: Projet de fin d'études
 </i18n>
 <template>
    <section>
@@ -34,7 +36,7 @@ fr:
                   <time>
                      {{ p.year }}
                   </time>
-                  - End-of-Study Project
+                  - {{ t("pfe") }}
                </span>
                <h4
                   class="mb-2 w-fit tracking-wider bg-accent-600 text-white px-2 py-0.5"
@@ -77,7 +79,7 @@ const ProjectsEntries: Project[] = [
       slug: "guideme",
       description:
          "A Smart White Cane for the visually impaired, featuring obstacle detection, and a custom mobile app for navigation and more",
-      image: "https://images.unsplash.com/photo-1516714819001-8ee7a13b71d7?w=400&q=100",
+      image: await require("@/assets/projects/guideme/pink.jpg"),
    },
    {
       year: 2019,

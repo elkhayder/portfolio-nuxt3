@@ -20,4 +20,9 @@ export const SocialMediaEntries: SocialMediaEntry[] = [
       href: "https://www.linkedin.com/in/elkhayderzakaria",
       title: "LinkedIn",
    },
+   {
+      icon: "fab fa-twitch",
+      href: "https://www.twitch.tv/elkhayder",
+      title: "Twitch",
+   },
 ];

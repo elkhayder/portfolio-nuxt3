@@ -58,7 +58,7 @@ fr:
                   <div class="pl-3 text-sm font-light text-gray-100">
                      {{ t("founder_of") }}
                      <a
-                        href="https://kuko.studio"
+                        href="https://www.linkedin.com/company/kuko-studio/"
                         target="_blank"
                         rel="noopener noreferrer"
                      >

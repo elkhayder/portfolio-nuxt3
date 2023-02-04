@@ -41,7 +41,16 @@
             }"
             :to="switchLocalePath(otherLocale)"
          >
-            {{ otherLocale.toUpperCase() }}
+            <!-- <span class="flex items-center gap-2"> -->
+            <img
+               :src="`https://flagicons.lipis.dev/flags/4x3/${
+                  otherLocale == 'en' ? 'gb' : 'fr'
+               }.svg`"
+               alt="Flag"
+               class="h-4"
+            />
+            <!-- {{ otherLocale.toUpperCase() }} -->
+            <!-- </span> -->
          </NuxtLink>
       </nav>
       <!-- Mobile Navbar -->
@@ -106,7 +115,7 @@ const { t, locale } = useI18n();
 const localePath = useLocalePath();
 const switchLocalePath = useSwitchLocalePath();
 
-const otherLocale = computed<string>(() =>
+const otherLocale = computed<"fr" | "en">(() =>
    locale.value == "en" ? "fr" : "en"
 ); // Works fine while there are only two locales: Fr, EN
 

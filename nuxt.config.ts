@@ -1,4 +1,9 @@
 import { NuxtConfig } from "nuxt/config";
+
+import { sort as sortPlugin } from "vite-plugin-utils/sort-plugin";
+import dynamicImport from "vite-plugin-dynamic-import";
+import { viteRequire } from "vite-require";
+
 import en from "./locales/en";
 import fr from "./locales/fr";
 
@@ -36,6 +41,20 @@ export default defineNuxtConfig({
          ],
          link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
       },
+   },
+   vite: {
+      plugins: [
+         // sortPlugin({
+         //    plugin: dynamicImport(),
+         //    names: ["vite:vue", "vite:vue-jsx"],
+         //    enforce: "post",
+         // }),
+         sortPlugin({
+            plugin: viteRequire(),
+            names: ["vite:vue", "vite:vue-jsx", "nuxt:vite-relative-asset"],
+            enforce: "post",
+         }),
+      ],
    },
    i18n: {
       baseUrl: "https://zelkhayder.me",
