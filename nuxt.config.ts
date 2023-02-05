@@ -11,6 +11,7 @@ import fr from "./locales/fr";
 export default defineNuxtConfig({
    css: ["@/assets/style/main.scss"],
    modules: [
+      "@nuxt/image-edge",
       "@nuxt/content",
       "@nuxtjs/i18n",
       ["@funken-studio/sitemap-nuxt-3", { generateOnBuild: true }],

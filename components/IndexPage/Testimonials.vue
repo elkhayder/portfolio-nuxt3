@@ -15,14 +15,15 @@ fr:
 </i18n>
 
 <template>
-   <a id="testimonials" class="anchor" />
+   <span id="testimonials" class="anchor" />
    <div id="testimonials" class="bg bg-[length:60px_60px] bg-repeat py-8">
       <section class="text-center">
          <figure class="max-w-screen-md mx-auto">
-            <img
-               src="@/assets/svg/quote.svg"
+            <nuxt-img
+               src="/svg/quote.svg"
                class="text-gray-400 h-14 mx-auto mb-3 bg-white p-3 pb-0"
                alt="Quote' Icon"
+               :height="64"
             />
             <blockquote>
                <p
@@ -36,10 +37,12 @@ fr:
                </p>
             </blockquote>
             <figcaption class="flex items-center justify-center mt-6 space-x-3">
-               <img
+               <nuxt-img
                   class="w-8 h-8 rounded-full object-cover"
-                  src="@/assets/images/people/hunor_kerekes.jpg"
+                  src="/images/people/hunor_kerekes.jpg"
                   alt="Hunor's profile picture"
+                  :width="40"
+                  :height="40"
                />
                <div
                   class="flex items-center divide-x-2 divide-gray-400 text-sm"
@@ -79,7 +82,7 @@ const { t } = useI18n();
 <style lang="scss" scoped>
 .bg {
    $bgOpacity: 0.9;
-   background-image: url("@/assets/images/testimonials-bg.png"),
+   background-image: url("/images/testimonials-bg.png"),
       linear-gradient(
          rgba(45, 45, 45, $bgOpacity),
          rgba(45, 45, 45, $bgOpacity)

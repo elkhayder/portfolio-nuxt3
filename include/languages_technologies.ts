@@ -144,7 +144,7 @@ export const RaspberryPI: LanguageTechnology = {
 
 export const Fritzing: LanguageTechnology = {
    name: "Fritzing",
-   image: "https://upload.wikimedia.org/wikipedia/commons/a/a8/Fritzing_icon_%28new%29.png",
+   image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Fritzing_icon_%28new%29.png/60px-Fritzing_icon_%28new%29.png",
    href: "https://fritzing.org/",
 };
 
@@ -222,7 +222,7 @@ export const OfficePowerPoint: LanguageTechnology = {
 
 export const LaTeX: LanguageTechnology = {
    name: "LaTeX",
-   image: require("@/assets/icons/latex.png"),
+   image: "/icons/latex.png",
    href: "https://www.latex-project.org/",
 };
 
@@ -234,31 +234,31 @@ export const Canva: LanguageTechnology = {
 
 export const ProteusDesignSuite: LanguageTechnology = {
    name: "Proteus Design Suite",
-   image: "https://upload.wikimedia.org/wikipedia/en/5/5a/Proteus_Design_Suite_Atom_Logo.png",
+   image: "https://upload.wikimedia.org/wikipedia/en/thumb/5/5a/Proteus_Design_Suite_Atom_Logo.png/60px-Proteus_Design_Suite_Atom_Logo.png",
    href: "https://www.labcenter.com/",
 };
 
 export const PhpMyAdmin: LanguageTechnology = {
    name: "phpMyAdmin",
-   image: require("@/assets/icons/phpmyadmin-icon-5611.png"),
+   image: "/icons/phpmyadmin-icon-5611.png",
    href: "https://www.phpmyadmin.net/",
 };
 
 export const Cloudflare: LanguageTechnology = {
    name: "Cloudflare",
-   image: require("@/assets/icons/cloudflare.svg"),
+   image: "/icons/cloudflare.svg",
    href: "https://www.cloudflare.com",
 };
 
 export const Vercel: LanguageTechnology = {
    name: "Vercel",
-   image: require("@/assets/icons/vercel.png"),
+   image: "/icons/vercel.png",
    href: "https://vercel.com/",
 };
 
 export const Netlify: LanguageTechnology = {
    name: "Netlify",
-   image: require("@/assets/icons/netlify-icon.svg"),
+   image: "/icons/netlify-icon.svg",
    href: "https://www.netlify.com/",
 };
 

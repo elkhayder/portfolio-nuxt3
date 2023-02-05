@@ -29,7 +29,7 @@ fr:
       - Baccalauréat en Science Technique Electrique
 </i18n>
 <template>
-   <a class="anchor" id="education" />
+   <span class="anchor" id="education" />
    <section>
       <h3 class="subtitle">Education</h3>
       <ol class="relative border-l border-accent-600">

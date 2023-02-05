@@ -29,10 +29,10 @@ body,
 
 a {
    @apply hover:underline transition;
+}
 
-   &.anchor {
-      @apply invisible relative block -top-24;
-   }
+.anchor {
+   @apply invisible relative block -top-24;
 }
 
 section {
@@ -50,14 +50,14 @@ section {
    }
 }
 
-body {
-   overflow: hidden;
-   &.loaded {
-      overflow: auto;
-   }
+// body {
+//    overflow: hidden;
+//    &.loaded {
+//       overflow: auto;
+//    }
 
-   // cursor: none;
-}
+//    // cursor: none;
+// }
 
 main {
    @apply pt-20;
@@ -68,7 +68,7 @@ main {
          rgba(45, 45, 45, $bgOpacity),
          rgba(45, 45, 45, $bgOpacity)
       ),
-      url(@/assets/images/background-bw.jpg);
+      url(/images/background-bw.jpg);
    background-position: center;
    background-size: cover;
 }

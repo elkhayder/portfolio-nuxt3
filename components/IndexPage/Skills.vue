@@ -66,11 +66,13 @@ fr:
                   target="_blank"
                   rel="noopener noreferrer"
                >
-                  <img
+                  <nuxt-img
                      :src="tech.image"
                      :alt="`${tech.name}'s Logo`"
                      :title="tech.name"
+                     :width="40"
                      class="w-full object-contain hover:grayscale-0 transition rounded-sm"
+                     fit="contain"
                   />
                </a>
             </div>

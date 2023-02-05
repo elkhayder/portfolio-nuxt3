@@ -20,9 +20,12 @@ fr:
                class="font-mono p-4 rounded-md overflow-hidden transition-colors duration-300 hover:bg-accent-200 group"
             >
                <div class="relative rounded-md overflow-hidden">
-                  <img
+                  <nuxt-img
                      :src="p.image"
                      class="w-full object-cover aspect-[9/8] relative"
+                     :width="330"
+                     loading="lazy"
+                     alt=""
                   />
                   <div
                      class="absolute inset-0 bg-accent-500/30 flex justify-center items-center transition-opacity opacity-0 group-hover:opacity-100 duration-300"
@@ -71,7 +74,7 @@ const ProjectsEntries: Project[] = [
       slug: "weather-station",
       description:
          "A general purpose Weather Station, featuring various sensors, a user-friendly web interface, and a coverage area of up to 2km in diameter",
-      image: "https://images.unsplash.com/photo-1534088568595-a066f410bcda?w=451&q=100",
+      image: "https://images.unsplash.com/photo-1534088568595-a066f410bcda?q=100&w=330&h=294&fit=crop",
    },
    {
       year: 2022,
@@ -79,7 +82,7 @@ const ProjectsEntries: Project[] = [
       slug: "guideme",
       description:
          "A Smart White Cane for the visually impaired, featuring obstacle detection, and a custom mobile app for navigation and more",
-      image: await require("@/assets/projects/guideme/pink.jpg"),
+      image: "/projects/images/guideme/pink.jpg",
    },
    {
       year: 2019,
@@ -87,7 +90,7 @@ const ProjectsEntries: Project[] = [
       slug: "rangefinder",
       description:
          "Measure distance to remote objects and calculate the surface area and the volume for various geometric shapes",
-      image: "https://images.unsplash.com/photo-1485851480953-7214e7bf049c?w=470&q=100",
+      image: "https://images.unsplash.com/photo-1485851480953-7214e7bf049c?q=100&w=330&h=294&fit=crop",
    },
 ];
 </script>

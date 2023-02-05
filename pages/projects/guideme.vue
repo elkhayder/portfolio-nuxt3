@@ -19,10 +19,10 @@ fr:
       <section class="my-0 py-6">
          <h2 class="title !text-white text-center">GuideME</h2>
          <h4 class="subtitle !text-white text-center">The Smart White Cane</h4>
-         <img
+         <nuxt-img
             alt="GuideMe"
             class="max-w-full max-h-64 w-auto object-contain mx-auto"
-            src="@/assets/projects/guideme/full_transparent.png"
+            src="/projects/images/guideme/full_transparent.png"
          />
       </section>
    </main>

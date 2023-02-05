@@ -5,7 +5,7 @@
 
    <!-- Resume -->
    <section class="pb-0 mb-0">
-      <a id="resume" class="anchor" />
+      <span id="resume" class="anchor" />
       <h2 class="title">{{ t("titles.resume") }}</h2>
    </section>
    <IndexPageEducation />
@@ -14,7 +14,7 @@
 
    <!-- Projects -->
    <section class="pb-0 mb-0">
-      <a id="projects" class="anchor" />
+      <span id="projects" class="anchor" />
       <h2 class="title">{{ t("titles.projects") }}</h2>
    </section>
    <AcademicProjects />
