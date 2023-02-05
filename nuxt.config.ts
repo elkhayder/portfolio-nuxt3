@@ -55,6 +55,7 @@ export default defineNuxtConfig({
             names: ["vite:vue", "vite:vue-jsx", "nuxt:vite-relative-asset"],
             enforce: "post",
          }),
+         { src: "~/plugins/vercel.ts", mode: "client" },
       ],
    },
    i18n: {
