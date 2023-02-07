@@ -20,7 +20,7 @@ fr:
       >
          <div class="w-full max-w-xs relative max-sm:mx-auto max-sm:-mb-10">
             <nuxt-img
-               src="/images/faceshot.jpg"
+               src="/images/ai_selfie.png"
                alt="EL KHAYDER's Image"
                class="sm:absolute rounded-lg w-full object-cover"
                :width="360"
