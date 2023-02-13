@@ -33,25 +33,8 @@
             <i :class="x.icon" />
          </NuxtLink>
          <span class="block w-0.5 h-8 bg-gray-400 opacity-50" />
-         <NuxtLink
-            class="text-base"
-            :class="{
-               'text-gray-600 hover:text-gray-800': isFolded,
-               'text-white hover:text-gray-200': !isFolded,
-            }"
-            :to="switchLocalePath(otherLocale)"
-         >
-            <!-- <span class="flex items-center gap-2"> -->
-            <img
-               :src="`https://flagicons.lipis.dev/flags/4x3/${
-                  otherLocale == 'en' ? 'gb' : 'fr'
-               }.svg`"
-               alt="Flag"
-               class="h-4"
-            />
-            <!-- {{ otherLocale.toUpperCase() }} -->
-            <!-- </span> -->
-         </NuxtLink>
+
+         <LanguageSwitcher />
       </nav>
       <!-- Mobile Navbar -->
       <button
@@ -97,13 +80,7 @@
                <i :class="x.icon" />
             </NuxtLink>
          </div>
-         <NuxtLink
-            class="text-lg mt-4 text-gray-600 hover:text-gray-800"
-            @click="closeMobileNav"
-            :to="switchLocalePath(otherLocale)"
-         >
-            {{ otherLocale.toUpperCase() }}
-         </NuxtLink>
+         <LanguageSwitcher />
       </nav>
    </header>
 </template>
@@ -111,13 +88,8 @@
 <script setup lang="ts">
 import { SocialMediaEntries } from "~~/include/misc";
 
-const { t, locale } = useI18n();
+const { t } = useI18n();
 const localePath = useLocalePath();
-const switchLocalePath = useSwitchLocalePath();
-
-const otherLocale = computed<"fr" | "en">(() =>
-   locale.value == "en" ? "fr" : "en"
-); // Works fine while there are only two locales: Fr, EN
 
 type NavEntry = {
    title: string;
