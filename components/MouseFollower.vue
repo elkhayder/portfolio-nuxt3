@@ -1,45 +1,48 @@
 <template>
    <div
-      class="pointer-events-none z-[200] fixed 0 transition-[opacity,background-color,transform] duration-300 opacity-80 -translate-x-1/2 -translate-y-1/2 rounded-full"
+      class="border-2 w-11 h-11 border-accent-400"
+      ref="bigRingRef"
       :class="{
-         'opacity-0': isHidden,
+         '!opacity-0': isHidden,
          'bg-accent-400 scale-75': isClickable,
       }"
-      :style="{
-         top: position.y + 'px',
-         left: position.x + 'px',
+   />
+   <div
+      class="w-2 h-2 bg-accent-400"
+      ref="smallRingRef"
+      :class="{
+         '!opacity-0': isHidden || isClickable,
       }"
-   >
-      <div class="rounded-full border-2 w-11 h-11 border-accent-400" />
-      <div
-         class="w-2 h-2 bg-accent-400 rounded-full absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2"
-      />
-   </div>
+   />
 </template>
 
 <script setup lang="ts">
-const position = reactive<{ x: number; y: number; scrollOffset: number }>({
-   x: 0,
-   y: 0,
-   scrollOffset: 0,
-});
-
 const isHidden = ref<boolean>(true);
 
 const isClickable = ref<boolean>(true);
 
+const bigRingRef = ref<HTMLDivElement>();
+const smallRingRef = ref<HTMLDivElement>();
+
 let timeout: NodeJS.Timeout | null = null;
 
 const onMouseMove = (e: MouseEvent) => {
-   position.x = e.pageX - window.scrollX;
-   position.y = e.pageY - window.scrollY;
+   // Hiding Logic
    isHidden.value = false;
-
-   timeout && clearTimeout(timeout!);
+   if (timeout) clearTimeout(timeout);
    timeout = setTimeout(() => {
       isHidden.value = true;
    }, 1000);
 
+   // Position Logic
+   const pos = {
+      left: `${e.pageX - window.scrollX}px`,
+      top: `${e.pageY - window.scrollY}px`,
+   };
+   bigRingRef.value?.animate(pos, { duration: 300, fill: "forwards" });
+   smallRingRef.value?.animate(pos, { duration: 800, fill: "forwards" });
+
+   // Clickable Logic
    const element = document.elementFromPoint(e.clientX, e.clientY);
 
    if (!element) return;
@@ -55,4 +58,8 @@ onMounted(() => {
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+div {
+   @apply rounded-full -translate-x-1/2 -translate-y-1/2 transition-[opacity,background-color] duration-300 opacity-80 pointer-events-none z-[200] fixed;
+}
+</style>
