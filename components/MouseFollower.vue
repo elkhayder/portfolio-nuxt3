@@ -39,8 +39,8 @@ const onMouseMove = (e: MouseEvent) => {
       left: `${e.pageX - window.scrollX}px`,
       top: `${e.pageY - window.scrollY}px`,
    };
-   bigRingRef.value?.animate(pos, { duration: 300, fill: "forwards" });
-   smallRingRef.value?.animate(pos, { duration: 800, fill: "forwards" });
+   bigRingRef.value?.animate(pos, { duration: 150, fill: "forwards" });
+   smallRingRef.value?.animate(pos, { duration: 300, fill: "forwards" });
 
    // Clickable Logic
    const element = document.elementFromPoint(e.clientX, e.clientY);
@@ -60,6 +60,6 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 div {
-   @apply rounded-full -translate-x-1/2 -translate-y-1/2 transition-[opacity,background-color] duration-300 opacity-80 pointer-events-none z-[200] fixed;
+   @apply rounded-full -translate-x-1/2 -translate-y-1/2 transition-[opacity,background-color,transform] duration-300 opacity-80 pointer-events-none z-[200] fixed;
 }
 </style>

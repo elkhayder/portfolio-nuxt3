@@ -12,6 +12,8 @@
       "@nuxt/content": "^2.4.0",
       "@nuxt/image-edge": "^1.0.0-27919678.2f5b64b",
       "@nuxtjs/i18n": "^8.0.0-beta.9",
+      "@vueuse/core": "^9.13.0",
+      "@vueuse/nuxt": "^9.13.0",
       "autoprefixer": "^10.4.13",
       "nuxt": "^3.1.2",
       "postcss": "^8.4.21",

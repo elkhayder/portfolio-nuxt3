@@ -15,6 +15,7 @@ export default defineNuxtConfig({
       "@nuxt/content",
       "@nuxtjs/i18n",
       ["@funken-studio/sitemap-nuxt-3", { generateOnBuild: true }],
+      "@vueuse/nuxt",
       // ["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_TOKEN }],
    ],
    postcss: {

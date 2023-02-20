@@ -43,6 +43,7 @@
                                  lang.flag ?? lang.code
                               }.svg`"
                               class="h-4 mr-2"
+                              preload
                            />
                            {{ lang.name }}
                            <i

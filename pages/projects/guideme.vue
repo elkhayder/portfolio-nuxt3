@@ -19,17 +19,32 @@ fr:
       <section class="my-0 py-6">
          <h2 class="title !text-white text-center">GuideME</h2>
          <h4 class="subtitle !text-white text-center">The Smart White Cane</h4>
-         <nuxt-img
+         <!-- <nuxt-img
             alt="GuideMe"
             class="max-w-full max-h-64 w-auto object-contain mx-auto"
             src="/projects/images/guideme/full_transparent.png"
-         />
+         /> -->
       </section>
    </main>
    <section>
-      <div class="grid grid-cols-2 gap-12">
+      <div class="grid grid-cols-2 grid-flow-dense gap-12">
          <div>
             <h2 class="subtitle">Description</h2>
+            <p>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+               ad velit quam, placeat beatae molestiae asperiores dolorum
+               maiores aperiam! Expedita alias cupiditate necessitatibus ut
+               ducimus vel libero provident, quia, excepturi voluptates
+               recusandae nesciunt numquam sit, ipsa quo impedit commodi quasi?
+               Esse qui aperiam cupiditate itaque sequi ut distinctio nisi autem
+               illum. Ex fugit quo inventore, ipsa dignissimos perferendis
+               minima aut ab iusto modi blanditiis reprehenderit recusandae,
+               consectetur exercitationem. Accusantium at repudiandae eius
+               aspernatur est possimus et laboriosam id consequatur enim.
+            </p>
+         </div>
+         <div>
+            <h2 class="subtitle">Purpose</h2>
             <p>
                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                Deleniti a voluptates libero, veritatis repellendus, ab atque
@@ -44,6 +59,21 @@ fr:
                Deleniti a voluptates libero, veritatis repellendus, ab atque
                veniam blanditiis molestiae fugit quasi totam eos vero, doloribus
                nihil repudiandae eum aliquam obcaecati.
+            </p>
+         </div>
+         <div>
+            <h2 class="subtitle">Description</h2>
+            <p>
+               Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
+               ad velit quam, placeat beatae molestiae asperiores dolorum
+               maiores aperiam! Expedita alias cupiditate necessitatibus ut
+               ducimus vel libero provident, quia, excepturi voluptates
+               recusandae nesciunt numquam sit, ipsa quo impedit commodi quasi?
+               Esse qui aperiam cupiditate itaque sequi ut distinctio nisi autem
+               illum. Ex fugit quo inventore, ipsa dignissimos perferendis
+               minima aut ab iusto modi blanditiis reprehenderit recusandae,
+               consectetur exercitationem. Accusantium at repudiandae eius
+               aspernatur est possimus et laboriosam id consequatur enim.
             </p>
          </div>
       </div>
