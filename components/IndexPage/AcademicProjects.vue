@@ -82,7 +82,7 @@ const ProjectsEntries: Project[] = [
       slug: "guideme",
       description:
          "A Smart White Cane for the visually impaired, featuring obstacle detection, and a custom mobile app for navigation and more",
-      image: "/projects/images/guideme/pink.jpg",
+      image: "/projects/guideme/images/pink.jpg",
    },
    {
       year: 2019,

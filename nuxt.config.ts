@@ -43,6 +43,12 @@ export default defineNuxtConfig({
             { hid: "og-type", property: "og:type", content: "website" },
          ],
          link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+         script: [
+            {
+               type: "module",
+               src: "https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js",
+            },
+         ],
       },
    },
    vite: {
@@ -59,6 +65,11 @@ export default defineNuxtConfig({
          }),
          { src: "~/plugins/vercel.ts", mode: "client" },
       ],
+   },
+   vue: {
+      compilerOptions: {
+         isCustomElement: (x) => ["model-viewer"].includes(x),
+      },
    },
    i18n: {
       baseUrl: "https://zelkhayder.me",

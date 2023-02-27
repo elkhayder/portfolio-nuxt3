@@ -5,7 +5,7 @@
    >
       <!-- Desktop Navbar -->
       <nav
-         class="w-full h-full max-w-6xl mx-auto px-6 flex items-center justify-start gap-x-12 max-lg:gap-x-8 flex-wrap max-md:hidden"
+         class="w-full h-full max-w-6xl mx-auto px-10 flex items-center justify-start gap-x-12 max-lg:gap-x-8 flex-wrap max-md:hidden"
       >
          <NuxtLink
             class="h-auto uppercase font-mono font-semibold transition"
