@@ -1,11 +1,12 @@
 <i18n lang="yaml">
 en:
-   title: Weather Station
-   alert: Project is still under construction, further updates will be published later
+   title: Telemeter
+   alert: Page is still in writing, further updates will be published later.
    redirect: You will be redirected to GuideMe Page in
+
 fr:
-   title: Station météo
-   alert: Le projet est toujours en cours de construction, des mises à jour seront publiées ultérieurement.
+   title: Télémètre
+   alert: Le page est en cours de rédaction, des mises à jour seront publiées ultérieurement.
    redirect: Vous serez redirigé vers la page GuideMe en
 </i18n>
 

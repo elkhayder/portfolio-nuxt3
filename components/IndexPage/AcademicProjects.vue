@@ -86,8 +86,8 @@ const ProjectsEntries: Project[] = [
    },
    {
       year: 2019,
-      title: "Rangefinder",
-      slug: "rangefinder",
+      title: "Telemeter",
+      slug: "telemeter",
       description:
          "Measure distance to remote objects and calculate the surface area and the volume for various geometric shapes",
       image: "https://images.unsplash.com/photo-1485851480953-7214e7bf049c?q=100&w=330&h=294&fit=crop",

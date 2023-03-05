@@ -15,86 +15,7 @@ fr:
 </i18n>
 
 <script setup lang="ts">
-import {
-   Arduino,
-   CLang,
-   Bluetooth,
-   Dart,
-   Flutter,
-   Fritzing,
-   LanguageTechnology,
-   ReactJs,
-   GoogleCloud,
-} from "~~/include/languages_technologies";
-
-import Buttons3DModel from "../../components/ProjectPage/guideme/Buttons3DModel.vue";
-import Handle3DModel from "../../components/ProjectPage/guideme/Handle3DModel.vue";
-
-const { t } = useI18n();
-
-// const UsedStack: [LanguageTechnology, string][] = [
-//    [CLang, "Used to program the Arduino Software"],
-//    [
-//       Arduino,
-//       "The heart of the Cane, used to process the sensors data and control the vibrators",
-//    ],
-//    [Bluetooth, "Used to communicate between the Cane and The mobile app"],
-//    [
-//       Flutter,
-//       "Used to develop the mobile app. It is cross platform and relatively easy to get started with",
-//    ],
-//    [
-//       Dart,
-//       "A programming language by Google. It was used to develop the mobile app using FLutter",
-//    ],
-//    [Fritzing, "Used for circuit schematic design"],
-//    [ReactJs, "Used to build the web interface that shows th shared place"],
-//    [
-//       GoogleCloud,
-//       "Used Geolocation and Google Places API to find proximity places and addresses",
-//    ],
-// ];
-const UsedTechnologies: LanguageTechnology[] = [
-   CLang,
-   Arduino,
-   Flutter,
-   Dart,
-   GoogleCloud,
-   ReactJs,
-   Fritzing,
-   Bluetooth,
-];
-
-const Sections = [
-   {
-      title: "Buttons",
-      paragraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-               ad velit quam, placeat beatae molestiae asperiores dolorum
-               maiores aperiam! Expedita alias cupiditate necessitatibus ut
-               ducimus vel libero provident, quia, excepturi voluptates
-               recusandae nesciunt numquam sit, ipsa quo impedit commodi quasi?
-               Esse qui aperiam cupiditate itaque sequi ut distinctio nisi autem
-               illum. Ex fugit quo inventore, ipsa dignissimos perferendis
-               minima aut ab iusto modi blanditiis reprehenderit recusandae,
-               consectetur exercitationem. Accusantium at repudiandae eius
-               aspernatur est possimus et laboriosam id consequatur enim.`,
-      model: Buttons3DModel,
-   },
-   {
-      title: "Handle",
-      paragraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
-               ad velit quam, placeat beatae molestiae asperiores dolorum
-               maiores aperiam! Expedita alias cupiditate necessitatibus ut
-               ducimus vel libero provident, quia, excepturi voluptates
-               recusandae nesciunt numquam sit, ipsa quo impedit commodi quasi?
-               Esse qui aperiam cupiditate itaque sequi ut distinctio nisi autem
-               illum. Ex fugit quo inventore, ipsa dignissimos perferendis
-               minima aut ab iusto modi blanditiis reprehenderit recusandae,
-               consectetur exercitationem. Accusantium at repudiandae eius
-               aspernatur est possimus et laboriosam id consequatur enim.`,
-      model: Handle3DModel,
-   },
-];
+const { t, locale } = useI18n();
 
 type Link = {
    title: string;
@@ -153,41 +74,165 @@ useHead({
          <h4 class="subtitle !text-white text-center">The Smart White Cane</h4>
       </section>
    </main>
-   <section>
-      <!-- <div class="flex gap-3">
-         <span class="subtitle after:content-[':']">Stack</span>
-         <NuxtLink v-for="x of UsedTechnologies" :to="x.href" target="_blank">
-            <img
-               :src="x.image"
-               :alt="x.name + '\'s Icon'"
-               :title="x.name"
-               class="max-w-8 max-h-8 w-full h-full object-contain rounded-sm"
-            />
-         </NuxtLink>
-      </div> -->
-      <div
-         v-for="section of Sections"
-         class="grid grid-cols-2 max-md:grid-cols-1 gap-4"
-      >
+   <section
+      v-if="locale == 'fr'"
+      class="bg-red-600 text-white rounded-xl py-8 text-center font-semibold italic"
+   >
+      Jusqu'à présent, cette page n'est disponible qu'en Anglais.<br />
+      La traduction en Français est en cours.
+   </section>
+   <section class="[&>.section]:my-4">
+      <h2 class="title">Parts</h2>
+      <div class="section reversed">
          <div>
-            <h2 class="title !text-xl">{{ section.title }}</h2>
-            <p v-html="section.paragraph" />
+            <h3 class="title">Handle</h3>
+            <ul class="spaced">
+               <li>
+                  We designed a very ergonomic, visual pleasing and easily
+                  usable
+                  <span class="italic">handle</span>.
+               </li>
+               <li>
+                  The cane can be used for long periods of time without feeling
+                  sore and hurt thanks to it's relatively lightweight. The
+                  <span class="italic">handle</span> weighs less than 300G, and
+                  most of it come from the 10000mAh battery that can be easily
+                  swapped.
+               </li>
+               <li>
+                  AN HC-SR04 Proximity sensor is placed in the front of the
+                  handle, tilted by a 45 degree angle to allow it to better
+                  detect obstacle in front of the user.
+               </li>
+               <li>
+                  A bendable cane can be connected to the handle using the
+                  thread in front of the cane.
+               </li>
+               <li>
+                  Control buttons are placed on the top of the handle, close to
+                  the thumb for easy use. Each button can do multiple tasks.
+               </li>
+               <li>
+                  Three LEDs are placed in different regions of the handle:
+                  <ul class="list-disc list-inside">
+                     <li>
+                        <b>Red LED</b>: Lights up when the battery capacity
+                        drops under 20%, a vocal warning will frequently play in
+                        the mobile app.
+                     </li>
+                     <li><b>Green LED</b>: Lights up when the cane is on.</li>
+                     <li>
+                        <b>White LED</b>: Can be controlled using the middle
+                        button, it is used to make the user more visible in dark
+                        periods and dim areas.
+                     </li>
+                  </ul>
+               </li>
+            </ul>
          </div>
-         <component :is="section.model" />
+         <ProjectPageGuidemeHandle3DModel />
+      </div>
+      <div class="section">
+         <div>
+            <h3 class="title">Buttons</h3>
+            <ul class="spaced">
+               <li>
+                  The <span class="font-bold italic">GuideMe</span> have 5
+                  buttons placed on top of the handle, they are used to control
+                  and navigate the mobile app.
+               </li>
+               <li>
+                  The buttons board is connected to the main board using jumper
+                  wires, the design can be updated to use a flex cable or
+                  different type of connectors.
+               </li>
+               <li>
+                  Three types of clicks can be detected:
+                  <ul class="list-disc list-inside">
+                     <li class="font-semibold">Simple & Quick click</li>
+                     <li class="font-semibold">Long press (>1000ms)</li>
+                     <li class="font-semibold">
+                        Double click (Two quick clicks in less than 200ms)
+                     </li>
+                  </ul>
+               </li>
+               <li>
+                  Depending on the type of the click, each button can execute
+                  different task. Thanks to the simplicity of the app, double
+                  click was never needed, and all tasks were able to be executed
+                  only using single or double click.
+                  <ol class="list-inside">
+                     <li>
+                        <b>Top Button</b>:
+                        <ul class="list-disc list-inside ml-4">
+                           <li>
+                              <b>Quick click:</b> Return to the previous page
+                           </li>
+                           <li><b>Long press:</b> Restart the app</li>
+                        </ul>
+                     </li>
+                     <li>
+                        <b>Bottom Button</b>:
+                        <ul class="list-disc list-inside ml-4">
+                           <li>
+                              <b>Quick click:</b> Click on the selected element
+                           </li>
+                           <li><b>Long press:</b> Start phone ringtone</li>
+                        </ul>
+                     </li>
+                     <li>
+                        <b>Left Button</b>:
+                        <ul class="list-disc list-inside ml-4">
+                           <li><b>Quick click:</b> Select previous element</li>
+                           <li><b>Long press:</b> Send emergency SMS</li>
+                        </ul>
+                     </li>
+                     <li>
+                        <b>Right Button</b>:
+                        <ul class="list-disc list-inside ml-4">
+                           <li><b>Quick click:</b> Select next element</li>
+                           <li>
+                              <b>Long press:</b> Navigate to the
+                              <span class="italic">Explore</span> page
+                           </li>
+                        </ul>
+                     </li>
+                     <li>
+                        <b>Middle Button</b>:
+                        <ul class="list-disc list-inside ml-4">
+                           <li><b>Quick click:</b> Click selected element</li>
+                           <li>
+                              <b>Long press:</b> Turn on/off the visibility LED
+                           </li>
+                        </ul>
+                     </li>
+                  </ol>
+               </li>
+            </ul>
+         </div>
+         <ProjectPageGuidemeButtons3DModel />
       </div>
 
-      <!-- <h3 class="title text-center">Presentation</h3>
-      <iframe
-         src="https://onedrive.live.com/embed?resid=6FBBFF37B5F9FC14%213725&amp;authkey=!AJBanoSqHABKbHw&amp;em=2&amp;wdAr=1.7777777777777777&amp;wdEaaCheck=1"
-         frameborder="0"
-         class="w-full max-w-4xl mx-auto aspect-video"
-      /> -->
+      <div class="section reversed">
+         <div>
+            <h2 class="title">Cane</h2>
+         </div>
+      </div>
+   </section>
+   <section class="[&>.section]:my-4">
+      <h2 class="title">Functionalities</h2>
+      <div class="section reversed">
+         <div>
+            <h3 class="title">X</h3>
+            <p></p>
+         </div>
+      </div>
    </section>
    <section>
       <div>
          <a id="assets" class="anchor" />
          <h4 class="title">Links & Assets</h4>
-         <ul class="list-disc">
+         <ul class="list-disc list-inside">
             <a
                v-for="link of Links"
                :href="link.url"
@@ -209,4 +254,29 @@ useHead({
    </section>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.section {
+   @apply grid grid-cols-2 max-md:grid-cols-1 gap-4;
+
+   .title {
+      @apply text-xl max-sm:text-lg;
+   }
+
+   &.reversed {
+      & > *:first-child {
+         @apply md:order-2;
+      }
+      & > *:last-child {
+         @apply md:order-1;
+      }
+   }
+
+   model-viewer {
+      @apply self-center;
+   }
+}
+
+ul.spaced {
+   @apply [&>li:not(:first-child)]:mt-2;
+}
+</style>

@@ -14,7 +14,7 @@ module.exports = {
       extend: {
          fontFamily: {
             mono: ['"Roboto Mono"', "monospace"],
-            sans: ['"Roboto Flex"', "sans-serif"],
+            sans: ['Lato', "sans-serif"],
          },
          colors: {
             accent: colors.orange,
