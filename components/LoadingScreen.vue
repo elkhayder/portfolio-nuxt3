@@ -1,12 +1,16 @@
 <template>
    <div
       v-if="isShown"
-      id="overlay"
       class="overlay"
       :class="{ loaded: isLoaded, 'pointer-events-none': isLoaded }"
    >
       <div class="overlayDoor" />
-      <div class="overlayContent">
+
+      <div
+         class="overlayContent text-2xl font-mono text-white mt-6 uppercase text-center"
+      >
+         <!-- <p class="ml-2">Wait!</p>
+         <p class="ml-2 mb-6">I'm thinking</p> -->
          <div class="loader">
             <div class="inner" />
          </div>

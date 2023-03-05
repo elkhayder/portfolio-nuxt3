@@ -19,7 +19,7 @@
       <NuxtPage />
    </NuxtLayout>
 
-   <!-- <LoadingScreen /> -->
+   <LoadingScreen />
 
    <LazyClientOnly>
       <MouseFollower />

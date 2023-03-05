@@ -29,39 +29,37 @@
    }
 }
 
-@layer components {
-   a {
-      @apply hover:underline transition;
-   }
+a {
+   @apply hover:underline transition;
+}
 
-   .anchor {
-      @apply invisible relative block -top-24;
-   }
+.anchor {
+   @apply invisible relative block -top-24;
+}
 
-   section {
-      @apply w-full max-w-6xl mx-auto my-16 py-2 px-6 sm:px-10;
-   }
+section {
+   @apply w-full max-w-6xl mx-auto my-16 py-2 px-6 sm:px-10;
+}
 
-   .subtitle {
-      @apply text-lg font-mono uppercase font-semibold text-gray-500 mb-6 tracking-[0.3em];
-   }
+.subtitle {
+   @apply text-lg font-mono uppercase font-semibold text-gray-500 mb-6 tracking-[0.3em];
+}
 
-   .title {
-      @apply text-3xl font-mono uppercase font-semibold text-gray-500 mb-6 tracking-[0.3em];
-      &::after {
-         content: "_";
-      }
+.title {
+   @apply text-3xl font-mono uppercase font-semibold text-gray-500 mb-6 tracking-[0.3em];
+   &::after {
+      content: "_";
    }
 }
 
-// body {
-//    overflow: hidden;
-//    &.loaded {
-//       overflow: auto;
-//    }
+body {
+   overflow: hidden;
+   &.loaded {
+      overflow: auto;
+   }
 
-//    // cursor: none;
-// }
+   //    // cursor: none;
+}
 
 main {
    @apply pt-20;
