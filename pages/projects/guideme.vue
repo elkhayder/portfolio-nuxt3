@@ -100,7 +100,7 @@ useHead({
                   swapped.
                </li>
                <li>
-                  AN HC-SR04 Proximity sensor is placed in the front of the
+                  An HC-SR04 Proximity sensor is placed in the front of the
                   handle, tilted by a 45 degree angle to allow it to better
                   detect obstacle in front of the user.
                </li>
