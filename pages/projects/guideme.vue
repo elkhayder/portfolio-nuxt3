@@ -88,7 +88,7 @@ useHead({
             <h3 class="title">Handle</h3>
             <ul class="spaced">
                <li>
-                  We designed a very ergonomic, visual pleasing and easily
+                  We designed a very ergonomic, visually pleasing and extremely
                   usable
                   <span class="italic">handle</span>.
                </li>
