@@ -75,13 +75,15 @@ useHead({
       </section>
    </main>
    <section v-if="locale == 'fr'" class="py-0">
-      <p
-         class="bg-red-600 text-white rounded-xl py-8 text-center font-semibold italic"
+      <div
+         class="bg-red-600 text-white rounded-xl py-8 px-4 text-center font-semibold italic"
       >
-         Jusqu'à présent, cette page n'est disponible qu'en anglais.<br />
-         La rapport et la présentation de soutenance sont disponibles en
-         français <NuxtLink href="#assets" class="underline">ici</NuxtLink>
-      </p>
+         <p>Jusqu'à présent, cette page n'est disponible qu'en anglais.</p>
+         <p>
+            La rapport et la présentation de soutenance sont disponibles en
+            français <NuxtLink href="#assets" class="underline">ici</NuxtLink>
+         </p>
+      </div>
    </section>
    <section>
       <h2 class="title">Page Content</h2>
