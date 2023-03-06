@@ -80,7 +80,7 @@ useHead({
       >
          <p>Jusqu'à présent, cette page n'est disponible qu'en anglais.</p>
          <p>
-            La rapport et la présentation de soutenance sont disponibles en
+            Le rapport et la présentation de soutenance sont disponibles en
             français <NuxtLink href="#assets" class="underline">ici</NuxtLink>
          </p>
       </div>
