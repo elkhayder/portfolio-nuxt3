@@ -76,7 +76,7 @@ useHead({
    </main>
    <section v-if="locale == 'fr'" class="py-0">
       <div
-         class="bg-red-600 text-white rounded-xl py-8 px-4 text-center font-semibold italic"
+         class="bg-red-600 text-white rounded-xl py-8 px-4 !text-center font-semibold italic"
       >
          <p>Jusqu'à présent, cette page n'est disponible qu'en anglais.</p>
          <p>
