@@ -70,23 +70,29 @@ useHead({
 <template>
    <main class="text-white">
       <section class="my-0 py-6">
-         <h2 class="title !text-white text-center">GuideME</h2>
-         <h4 class="subtitle !text-white text-center">The Smart White Cane</h4>
+         <h2 class="title !text-white text-center">
+            <HackerTitle title="GuideME" />
+         </h2>
+         <h4 class="subtitle !text-white text-center">
+            <HackerTitle title="The Smart White Cane" />
+         </h4>
       </section>
    </main>
    <section v-if="locale == 'fr'" class="py-0">
       <div
-         class="bg-red-600 text-white rounded-xl py-8 px-4 !text-center font-semibold italic"
+         class="bg-red-600 text-white rounded-xl py-8 px-4 font-semibold italic"
       >
-         <p>Jusqu'à présent, cette page n'est disponible qu'en anglais.</p>
-         <p>
+         <p class="!text-center">
+            Jusqu'à présent, cette page n'est disponible qu'en anglais.
+         </p>
+         <p class="!text-center">
             Le rapport et la présentation de soutenance sont disponibles en
             français <NuxtLink href="#assets" class="underline">ici</NuxtLink>
          </p>
       </div>
    </section>
    <section>
-      <h2 class="title">Page Content</h2>
+      <h2 class="title"><HackerTitle title="Page Content" /></h2>
       <ul>
          <li class="subtitle !mb-2">
             <a href="#parts">1. Parts</a>
@@ -101,7 +107,7 @@ useHead({
    </section>
    <div class="anchor" id="parts" />
    <section class="[&>.section]:my-4">
-      <h2 class="title">Parts</h2>
+      <h2 class="title"><HackerTitle title="Parts" /></h2>
       <div class="section reversed">
          <div>
             <h3 class="title">Handle</h3>
@@ -253,7 +259,7 @@ useHead({
    </section>
    <div class="anchor" id="functionalities" />
    <section class="functionalities">
-      <h2 class="title truncate">Functionalities</h2>
+      <h2 class="title truncate"><HackerTitle title="Functionalities" /></h2>
       <div class="section">
          <div>
             <h4 class="subtitle">Detect obstacles</h4>
@@ -318,7 +324,7 @@ useHead({
    <section>
       <div>
          <a id="assets" class="anchor" />
-         <h4 class="title">Links & Assets</h4>
+         <h4 class="title"><HackerTitle title="Links & Assets" /></h4>
          <ul class="list-disc list-inside">
             <a
                v-for="link of Links"

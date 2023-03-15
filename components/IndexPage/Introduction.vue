@@ -29,23 +29,25 @@ fr:
             />
          </div>
          <div>
-            <h1 class="charta text-4xl font-bold">EL KHAYDER ZAKARIA</h1>
+            <h1 class="charta text-4xl font-bold">
+               <HackerTitle title="EL KHAYDER ZAKARIA" />
+            </h1>
             <h3 class="mt-2 mb-10">{{ t("subtitle") }}</h3>
             <dl>
-               <dt>Age</dt>
+               <dt><HackerTitle title="Age" /></dt>
                <dd>
                   {{ diffYears(new Date(), new Date("2002-12-27")) }}
                   {{ t("yo") }}
                </dd>
-               <dt>{{ t("phone") }}</dt>
+               <dt><HackerTitle :title="t('phone')" /></dt>
                <dd><a href="tel:+33745640961">+33 745 640961</a></dd>
-               <dt>Email</dt>
+               <dt><HackerTitle title="Email" /></dt>
                <dd>
                   <a href="mailto:zelkhayder@gmail.com" class="text-ellipsis">
                      zelkhayder@gmail.com
                   </a>
                </dd>
-               <dt>{{ t("location") }}</dt>
+               <dt><HackerTitle :title="t('location')" /></dt>
                <dd>Strasbourg, France</dd>
             </dl>
          </div>

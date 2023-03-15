@@ -6,7 +6,9 @@
    <!-- Resume -->
    <section class="pb-0 mb-0">
       <span id="resume" class="anchor" />
-      <h2 class="title">{{ t("titles.resume") }}</h2>
+      <h2 class="title">
+         <HackerTitle :title="t('titles.resume')" />
+      </h2>
    </section>
    <IndexPageEducation />
    <IndexPageSkills />
@@ -15,7 +17,9 @@
    <!-- Projects -->
    <section class="pb-0 mb-0">
       <span id="projects" class="anchor" />
-      <h2 class="title">{{ t("titles.projects") }}</h2>
+      <h2 class="title">
+         <HackerTitle :title="t('titles.projects')" />
+      </h2>
    </section>
    <AcademicProjects />
 
