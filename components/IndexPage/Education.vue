@@ -5,11 +5,15 @@ en:
    jun: June
    jul: July
    ma: Morocco
+   starting: Starting from
+   until: until
    schools:
+      - Centrale Nantes
       - Faculty of Physics and Engineering
       - Superior School of Technology
       - Ibn Mandour High School
    degrees:
+      - Engineering Degree in Embedded Systems
       - Bachelor in Electronic Systems
       - University diploma of technology (DUT) in Electronics and Industrial IT
       - High School Diploma in Electrical Science and Technology
@@ -19,11 +23,15 @@ fr:
    jun: Juin
    jul: Juillet
    ma: Maroc
+   starting: De
+   until: à
    schools:
+      - Centrale Nantes
       - Faculté de physique et ingenierie
       - Ecole supérieure de Technologie
       - Lycée Qualifiant Ibn Mandour
    degrees:
+      - Ingénierie des Systèmes Embarqués Communicants
       - Licence en Systèmes Electroniques
       - Diplôme Universitaire Technique (DUT) en Electronique et Informatique Industrielle
       - Baccalauréat en Science Technique Electrique
@@ -41,14 +49,15 @@ fr:
                class="mb-2 text-sm font-normal leading-none text-gray-700"
                title="Date"
             >
-               {{ t("since") }}
-               <time>{{ t("sep") }} 2022</time>
+               <time>{{ t("sep") }} 2023</time>
+               -
+               <time>{{ t("sep") }} 2026</time>
             </h6>
             <h6
                class="mb-4 text-sm font-normal leading-none text-gray-400"
                title="Location"
             >
-               Strasbourg, France
+               Nantes, France
             </h6>
             <h5 class="text-lg font-semibold text-gray-900">
                <a
@@ -64,6 +73,41 @@ fr:
                   target="_blank"
                >
                   {{ t("degrees.0") }}
+               </a>
+            </p>
+         </li>
+         <li class="mb-10 ml-6">
+            <div
+               class="absolute w-3 h-3 bg-accent-600 rounded-full mt-1.5 -left-1.5 border border-white"
+            />
+            <h6
+               class="mb-2 text-sm font-normal leading-none text-gray-700"
+               title="Date"
+            >
+               <time>{{ t("sep") }} 2022</time>
+               -
+               <time>{{ t("jun") }} 2023</time>
+            </h6>
+            <h6
+               class="mb-4 text-sm font-normal leading-none text-gray-400"
+               title="Location"
+            >
+               Strasbourg, France
+            </h6>
+            <h5 class="text-lg font-semibold text-gray-900">
+               <a
+                  href="https://physique-ingenierie.unistra.fr/"
+                  target="_blank"
+               >
+                  {{ t("schools.1") }}
+               </a>
+            </h5>
+            <p class="text-base font-normal text-gray-500">
+               <a
+                  href="https://physique-ingenierie.unistra.fr/formations/licences/licence-sciences-pour-lingenieur/systemes-electroniques-se"
+                  target="_blank"
+               >
+                  {{ t("degrees.1") }}
                </a>
             </p>
          </li>
