@@ -131,7 +131,7 @@ fr:
             </h6>
             <h5 class="text-lg font-semibold text-gray-900">
                <a href="http://www.est-uh2c.ac.ma/" target="_blank">
-                  {{ t("schools.1") }}
+                  {{ t("schools.2") }}
                </a>
             </h5>
             <p class="text-base font-normal text-gray-500">
@@ -139,7 +139,7 @@ fr:
                   href="http://www.est-uh2c.ac.ma/formation/formation-initiale/g%C3%A9nie-%C3%A9lectrique-2/"
                   target="_blank"
                >
-                  {{ t("degrees.1") }}
+                  {{ t("degrees.2") }}
                </a>
             </p>
          </li>
@@ -163,11 +163,11 @@ fr:
             </h6>
             <h5 class="text-lg font-semibold text-gray-900">
                <a href="http://www.est-uh2c.ac.ma/" target="_blank">
-                  {{ t("schools.2") }}
+                  {{ t("schools.3") }}
                </a>
             </h5>
             <p class="text-base font-normal text-gray-500">
-               {{ t("degrees.2") }}
+               {{ t("degrees.3") }}
             </p>
          </li>
       </ol>
