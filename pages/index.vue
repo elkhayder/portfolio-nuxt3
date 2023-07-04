@@ -10,7 +10,7 @@
          <HackerTitle :title="t('titles.resume')" />
       </h2>
    </section>
-   <IndexPageEducation />
+   <IndexPageEducationAndExperience />
    <IndexPageSkills />
    <IndexPageSpokenLanguages />
 

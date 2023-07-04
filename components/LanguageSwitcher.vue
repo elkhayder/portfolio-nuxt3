@@ -14,10 +14,10 @@
       </button>
       <transition
          enter-active-class="transition ease duration-300 transform"
-         enter-class="opacity-0 translate-y-2"
+         enter-from-class="opacity-0 translate-y-2"
          enter-to-class="opacity-100 translate-y-0"
          leave-active-class="transition ease duration-300 transform"
-         leave-class="opacity-100 translate-y-0"
+         leave-from-class="opacity-100 translate-y-0"
          leave-to-class="opacity-0 translate-y-4"
       >
          <div
@@ -38,12 +38,11 @@
                            class="flex items-center w-full"
                            @click="isMenuOpen = false"
                         >
-                           <nuxt-img
+                           <img
                               :src="`https://flagicons.lipis.dev/flags/4x3/${
                                  lang.flag ?? lang.code
                               }.svg`"
                               class="h-4 mr-2"
-                              preload
                            />
                            {{ lang.name }}
                            <i
@@ -75,6 +74,16 @@ const currentLocale = computed(
 
 const localePath = useLocalePath();
 const switchLocalePath = useSwitchLocalePath();
+
+useHead({
+   link: typedLocales.value.map((lang) => ({
+      rel: "preload",
+      href: `https://flagicons.lipis.dev/flags/4x3/${
+         lang.flag ?? lang.code
+      }.svg`,
+      as: "image",
+   })),
+});
 
 // onLanguageSwitched = (oldLocale: string, newLocale: string) => {
 //    isMenuOpen.value = false;
