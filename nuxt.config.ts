@@ -16,11 +16,13 @@ export default defineNuxtConfig({
       // "@nuxtjs/tailwindcss",
       // ["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_TOKEN }],
    ],
-   postcss: {
-      postcssOptions: {
-         plugins: {
-            tailwindcss: {},
-            autoprefixer: {},
+   build: {
+      postcss: {
+         postcssOptions: {
+            plugins: {
+               tailwindcss: {},
+               autoprefixer: {},
+            },
          },
       },
    },
