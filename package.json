@@ -1,6 +1,9 @@
 {
    "private": true,
    "node": ">=18.0.0",
+   "engines": {
+      "node": ">=18.0.0"
+   },
    "scripts": {
       "build": "nuxt build",
       "dev": "nuxt dev",
