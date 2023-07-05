@@ -48,7 +48,7 @@ fr:
 <template>
    <span class="anchor" id="education" />
    <section>
-      <div class="grid grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
          <div>
             <h3 class="subtitle">Education</h3>
             <Timeline :items="Education" />
