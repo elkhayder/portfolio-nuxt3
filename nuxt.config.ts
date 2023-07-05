@@ -6,7 +6,7 @@ import { viteRequire } from "vite-require";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-   css: ["@/assets/style/main.scss"],
+   // css: ["~/assets/css/main.scss"],
    modules: [
       "@nuxt/image-edge",
       "@nuxt/content",
@@ -16,14 +16,10 @@ export default defineNuxtConfig({
       // "@nuxtjs/tailwindcss",
       // ["@storyblok/nuxt", { accessToken: process.env.STORYBLOK_TOKEN }],
    ],
-   build: {
-      postcss: {
-         postcssOptions: {
-            plugins: {
-               tailwindcss: {},
-               autoprefixer: {},
-            },
-         },
+   postcss: {
+      plugins: {
+         tailwindcss: {},
+         autoprefixer: {},
       },
    },
    // nitro: {
