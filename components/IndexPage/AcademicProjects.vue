@@ -9,7 +9,7 @@ fr:
 </i18n>
 <template>
    <section>
-      <h3 class="subtitle">{{ t("title") }}</h3>
+      <!-- <h3 class="subtitle">{{ t("title") }}</h3> -->
       <div class="grid gap-4 grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1">
          <NuxtLink
             v-for="p of ProjectsEntries"

@@ -34,6 +34,24 @@ fr:
         - Application pratique
       - - Avancé
         - Théorie appliquée
+
+ar:
+   title: المهارات
+   frontend: تطوير الواجهة الأمامية
+   backend: تطوير الواجهة الخلفية
+   embedded: أنظمة مضمنة
+   mobile: تطوير التطبيقات المحمولة
+   ui_ux: تصميم تجربة وواجهة المستخدم
+   others: مهارات أخرى
+   proficiency:
+      - - مفاهيم
+        - معرفة أساسية
+      - - مبتدئ
+        - تجربة محدودة
+      - - متوسط
+        - تطبيق عملي
+      - - متقدم
+        - نظرية مطبقة
 </i18n>
 
 <template>

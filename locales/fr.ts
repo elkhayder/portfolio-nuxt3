@@ -1,11 +1,12 @@
-import en from "./en";
-
-const fr: typeof en = {
+const fr = {
    titles: {
       home: "Accueil",
       resume: "CV",
       projects: "Projets",
       testimonials: "Témoignages",
+   },
+   countries: {
+      ma: "Maroc",
    },
 };
 

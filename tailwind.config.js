@@ -1,4 +1,5 @@
 const colors = require("tailwindcss/colors");
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -13,8 +14,9 @@ module.exports = {
    theme: {
       extend: {
          fontFamily: {
-            mono: ['"Roboto Mono"', "monospace"],
-            sans: ['Lato', "sans-serif"],
+            mono: ['"Roboto Mono"', defaultTheme.fontFamily.mono],
+            sans: ["Lato", defaultTheme.fontFamily.sans],
+            cairo: ["Cairo", defaultTheme.fontFamily.sans],
          },
          colors: {
             accent: colors.orange,

@@ -12,6 +12,11 @@ fr:
       robustes et évolutives qui ont dépassé les attentes de nos clients... Il est agréable
       à travailler avec et proactif dans l'identification et la résolution des problèmes
    founder_of: Fondateur de
+
+ar:
+   quote: لقد لعب زكرياء دورًا حاسمًا في تطوير عدة تطبيقات قوية وقابلة للتوسعة
+      تجاوزت توقعات عملائنا... إنه شخص ممتع العمل معه، يتعامل بسهولة، ونشط في تحديد وحل المشكلات
+   founder_of: مؤسس
 </i18n>
 
 <template>
@@ -44,9 +49,7 @@ fr:
                   :width="40"
                   :height="40"
                />
-               <div
-                  class="flex items-center divide-x-2 divide-gray-400 text-sm"
-               >
+               <div class="flex items-center text-sm">
                   <div
                      class="mr-3 px-1 font-medium text-gray-800 bg-white font-mono"
                   >
@@ -58,6 +61,7 @@ fr:
                         Hunor Kerekes
                      </a>
                   </div>
+                  <div class="mx-4 h-4 w-[1px] bg-white" />
                   <div class="pl-3 text-sm font-light text-gray-100">
                      {{ t("founder_of") }}
                      <a

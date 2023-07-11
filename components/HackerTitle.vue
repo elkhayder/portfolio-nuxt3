@@ -11,10 +11,19 @@ const mangled = ref(title);
 
 let interval: NodeJS.Timer | null = null;
 
+const locale = useI18n().locale;
+
 const onMouseOver = (e: MouseEvent) => {
    let iteration = 0;
 
    clearInterval(interval!);
+
+   const isArabic = locale.value == "ar";
+
+   const CharStart = isArabic ? 1575 : 97;
+   const CharsCount = isArabic ? 28 : 26;
+
+   const CharPerIter = isArabic ? 1 : 3;
 
    interval = setInterval(() => {
       mangled.value = title
@@ -25,7 +34,7 @@ const onMouseOver = (e: MouseEvent) => {
             }
 
             return String.fromCharCode(
-               97 + Math.floor(Math.random() * 26)
+               CharStart + Math.floor(Math.random() * CharsCount)
             ).toUpperCase();
          })
          .join("");
@@ -34,7 +43,7 @@ const onMouseOver = (e: MouseEvent) => {
          clearInterval(interval!);
       }
 
-      iteration += 1 / 3;
+      iteration += 1 / CharPerIter;
    }, 30);
 };
 </script>

@@ -10,6 +10,12 @@ fr:
    ar: Arabe
    fr: Français
    en: Anglais
+
+ar:
+   title: اللغات
+   ar: العربية
+   fr: الفرنسية
+   en: الإنجليزية
 </i18n>
 
 <template>

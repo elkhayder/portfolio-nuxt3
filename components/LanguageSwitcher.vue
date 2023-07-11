@@ -1,5 +1,5 @@
 <template>
-   <div class="relative w-[fit-content]">
+   <div dir="ltr" class="relative w-[fit-content]">
       <button
          class="bg-white text-gray-500 rounded py-2 px-3 focus:outline-none flex items-center"
          @click="isMenuOpen = !isMenuOpen"

@@ -1,11 +1,14 @@
 <i18n lang="yaml">
 en:
-   ma: Morocco
    since: Since
    starting: Starting from
    until: until
    stage: Internship
    alternance: Apprenticeship
+   education: Education
+   experience: Experience
+   selfEmployed: Self-Employed
+   international: International
    schools:
       - Centrale Nantes
       - Faculty of Physics and Engineering
@@ -23,12 +26,12 @@ en:
       - Computer Repair Specialist
 
 fr:
-   ma: Maroc
    since: Depuis
    starting: De
    until: à
    stage: Stage
    alternance: Alternance
+   education: Parcours Scolaire
    schools:
       - Centrale Nantes
       - Faculté de physique et ingenierie
@@ -44,17 +47,44 @@ fr:
       - Automaticien
       - Développeur WEB Full-Stack
       - Spécialiste des réparations informatiques
+
+ar:
+   ma: المغرب
+   since: منذ
+   starting: ابتداءً من
+   until: حتى
+   stage: متدرب
+   alternance: تدريب مزدوج (تعاقد تدريبي)
+   education: المسار الدراسي
+   experience: الخبرة العملية
+   selfEmployed: العمل الحر
+   international: دولي
+   schools:
+      - Ecole Centrale de Nantes
+      - كلية الفيزياء والهندسة
+      - المدرسة العليا للتكنولوجيا
+      - ثانوية ابن منظور
+   degrees:
+      - درجة الهندسة في الأنظمة المضمنة
+      - بكالوريوس في الأنظمة الإلكترونية
+      - دبلوم جامعي تكنولوجي (DUT) في الإلكترونيات وتقنية المعلومات الصناعية
+      - شهادة البكالوريا في العلوم والتكنولوجيا الكهربائية
+   experiences:
+      - مهندس برمجيات في الوقت الحقيقي، الذكاء الاصطناعي/تعلم الآلة
+      - مهندس التشغيل الآلي
+      - مطور ويب
+      - متخصص في إصلاح الحواسيب
 </i18n>
 <template>
    <span class="anchor" id="education" />
    <section>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
          <div>
-            <h3 class="subtitle">Education</h3>
+            <h3 class="subtitle">{{ t("education") }}</h3>
             <Timeline :items="Education" />
          </div>
          <div>
-            <h3 class="subtitle">Experience</h3>
+            <h3 class="subtitle">{{ t("experience") }}</h3>
             <Timeline :items="Experience" />
          </div>
       </div>
@@ -72,7 +102,7 @@ const Education: TimelineItem[] = [
          start: { month: "sep", year: 2023 },
          end: { month: "sep", year: 2026 },
       },
-      location: "Nantes, France",
+      location: city_country("nantes", "fr"),
       institution: {
          link: "https://www.ec-nantes.fr/",
          text: t("schools.0"),
@@ -87,7 +117,7 @@ const Education: TimelineItem[] = [
          start: { month: "sep", year: 2022 },
          end: { month: "jun", year: 2023 },
       },
-      location: "Strasbourg, France",
+      location: city_country("strasbourg", "fr"),
       institution: {
          link: "https://physique-ingenierie.unistra.fr/",
          text: t("schools.1"),
@@ -102,7 +132,7 @@ const Education: TimelineItem[] = [
          start: { month: "sep", year: 2020 },
          end: { month: "jul", year: 2022 },
       },
-      location: "Casablanca, " + t("ma"),
+      location: city_country("casablanca", "ma"),
       institution: {
          link: "http://www.est-uh2c.ac.ma/",
          text: t("schools.2"),
@@ -117,7 +147,7 @@ const Education: TimelineItem[] = [
          start: { month: "sep", year: 2017 },
          end: { month: "jul", year: 2020 },
       },
-      location: "Casablanca, " + t("ma"),
+      location: city_country("casablanca", "ma"),
       institution: t("schools.3"),
       title: t("degrees.3"),
    },
@@ -141,7 +171,7 @@ const Experience: TimelineItem[] = [
          start: { month: "apr", year: 2022 },
          end: { month: "jun", year: 2022 },
       },
-      location: "Casablanca, " + t("ma"),
+      location: t("cities.ma.casablanca") + ", " + t("ma"),
       institution: {
          text: "Competence Center On Automation",
          link: "https://competence-automation.ma/",
@@ -153,15 +183,15 @@ const Experience: TimelineItem[] = [
          start: { month: "mai", year: 2021 },
          end: { month: "jan", year: 2022 },
       },
-      location: "International",
-      institution: "Self-employed",
-      title: t("experiences.2") + " - Freelance",
+      location: t("international"),
+      institution: t("selfEmployed"),
+      title: t("experiences.2"), //+ " - Freelance",
    },
    {
       date: {
          start: { month: "jul", year: 2017 },
       },
-      location: "Casablanca, " + t("ma"),
+      location: t("cities.ma.casablanca") + ", " + t("ma"),
       institution: "Technomark Maroc",
       title: t("experiences.3") + " - " + t("stage"),
    },

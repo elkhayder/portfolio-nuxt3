@@ -4,6 +4,9 @@ en:
 
 fr:
    arr: Tous droits réservés
+
+ar:
+   arr: جميع الحقوق محفوظة
 </i18n>
 
 <template>
@@ -15,9 +18,9 @@ fr:
          <div
             class="flex items-center gap-4 justify-between max-md:justify-center max-md:flex-col"
          >
-            <span class="text-sm text-gray-400 sm:text-center">
-               &copy; {{ new Date().getFullYear() }}
-               <a href="https://zelkhayder.me/">@elkhayder</a>
+            <span dir="ltr" class="text-sm text-gray-400 sm:text-center">
+               &copy; 2022 - {{ new Date().getFullYear() }}
+               <!-- <a href="https://zelkhayder.me/">@elkhayder</a> -->
                <span class="mx-2">|</span> {{ t("arr") }}
             </span>
             <div class="flex gap-4">

@@ -1,15 +1,27 @@
 <i18n lang="yaml">
 en:
-   subtitle: Web developer, Electronics engineering student
+   subtitle: Web developer, Electronics & Embedded Systems engineering student
    phone: Phone
    location: Location
+   email: Email
+   age: Age
    yo: years old
+   city: Strasbourg, France
 
 fr:
-   subtitle: Developpeur Web, et étudiant en ingenierie des Systèmes électroniques
+   subtitle: Developpeur Web, et étudiant en ingenierie des Systèmes électroniques et Embarqués
    phone: Tel
    location: Localisation
    yo: ans
+
+ar:
+   subtitle: مطور ويب، طالب هندسة الإلكترونيات وأنظمة النظم المضمنة
+   phone: هاتف
+   location: موقع
+   yo: سنة
+   email: البريد الإلكتروني
+   age: العمر
+   city: ستراسبورغ، فرنسا
 </i18n>
 
 <template>
@@ -30,25 +42,42 @@ fr:
          </div>
          <div>
             <h1 class="charta text-4xl font-bold">
-               <HackerTitle title="EL KHAYDER ZAKARIA" />
+               <HackerTitle :title="t('name')" />
             </h1>
             <h3 class="mt-2 mb-10">{{ t("subtitle") }}</h3>
             <dl>
-               <dt><HackerTitle title="Age" /></dt>
+               <template v-for="x of info">
+                  <dt>
+                     <HackerTitle :title="x.title" />
+                  </dt>
+                  <dd>
+                     <template v-if="typeof x.value === 'string'">
+                        {{ x.value }}
+                     </template>
+                     <template v-else>
+                        <a dir="ltr" :href="x.value.href" class="text-ellipsis">
+                           {{ x.value.text }}
+                        </a>
+                     </template>
+                  </dd>
+               </template>
+               <!-- <dt><HackerTitle :title="t('age')" /></dt>
                <dd>
                   {{ diffYears(new Date(), new Date("2002-12-27")) }}
-                  {{ t("yo") }}
+                  {{}}
                </dd>
                <dt><HackerTitle :title="t('phone')" /></dt>
-               <dd><a href="tel:+33745640961">+33 745 640961</a></dd>
-               <dt><HackerTitle title="Email" /></dt>
+               <dd>
+                  <a dir="ltr" href="tel:+33745640961"> +33 745 640961 </a>
+               </dd>
+               <dt><HackerTitle :title="t('email')" /></dt>
                <dd>
                   <a href="mailto:zelkhayder@gmail.com" class="text-ellipsis">
                      zelkhayder@gmail.com
                   </a>
                </dd>
                <dt><HackerTitle :title="t('location')" /></dt>
-               <dd>Strasbourg, France</dd>
+               <dd>Strasbourg, France</dd> -->
             </dl>
          </div>
       </div>
@@ -59,16 +88,41 @@ fr:
 import { diffYears } from "@/include/helpers";
 
 const { t } = useI18n();
+
+const info = [
+   {
+      title: t("age"),
+      value: diffYears(new Date(), new Date("2002-12-27")) + " " + t("yo"),
+   },
+   {
+      title: t("phone"),
+      value: {
+         text: "+33 745 640961",
+         href: "tel:+33745640961",
+      },
+   },
+   {
+      title: t("email"),
+      value: {
+         text: "zelkhayder@gmail.com",
+         href: "mailto:zelkhayder@gmail.com",
+      },
+   },
+   {
+      title: t("location"),
+      value: t("city"),
+   },
+];
 </script>
 
 <style lang="scss" scoped>
 dl {
    dd {
-      @apply pl-36 my-4;
+      @apply ltr:pl-36 rtl:pr-48 my-4;
    }
 
    dt {
-      @apply float-left uppercase text-gray-700  bg-white px-1 font-semibold;
+      @apply rtl:float-right ltr:float-left  uppercase text-gray-700  bg-white px-1 font-semibold;
 
       &::after {
          content: ":";

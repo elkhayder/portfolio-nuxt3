@@ -6,6 +6,7 @@ en:
    apr: April
    mai: May
    jan: January
+
 fr:
    sep: Septembre
    jun: Juin
@@ -13,6 +14,14 @@ fr:
    apr: Avril
    mai: Mai
    jan: Janvier
+
+ar:
+   sep: شتنبر
+   jun: يونيو
+   jul: يوليوز
+   apr: أبريل
+   mai: ماي
+   jan: يناير
 </i18n>
 
 <script setup lang="ts">
