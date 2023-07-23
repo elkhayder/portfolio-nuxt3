@@ -48,10 +48,10 @@ const { t } = useI18n();
 </script>
 
 <template>
-   <ol class="relative border-l border-accent-600">
-      <li v-for="item of items" class="mb-10 ml-6">
+   <ol class="relative ltr:border-l rtl:border-r border-accent-600">
+      <li v-for="item of items" class="mb-10 ltr:ml-6 rtl:mr-6">
          <div
-            class="absolute w-3 h-3 bg-accent-600 rounded-full mt-1.5 -left-1.5 border border-white"
+            class="absolute w-3 h-3 bg-accent-600 rounded-full mt-1.5 ltr:-left-1.5 rtl:-right-1.5 border border-white"
          />
          <h6
             class="mb-2 text-sm font-normal leading-none text-gray-700"
