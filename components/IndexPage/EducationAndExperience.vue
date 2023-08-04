@@ -154,18 +154,18 @@ const Education: TimelineItem[] = [
 ];
 
 const Experience: TimelineItem[] = [
-   // {
-   //    date: {
-   //       start: { month: "sep", year: 2023 },
-   //       end: { month: "sep", year: 2026 },
-   //    },
-   //    location: "Brest, France",
-   //    institution: {
-   //       text: "Alcatel-Lucent Enterprise",
-   //       link: "https://www.al-enterprise.com/",
-   //    },
-   //    title: t("experiences.0") + " - " + t("alternance"),
-   // },
+   {
+      date: {
+         start: { month: "sep", year: 2023 },
+         end: { month: "sep", year: 2026 },
+      },
+      location: "Brest, France",
+      institution: {
+         text: "Alcatel-Lucent Enterprise",
+         link: "https://www.al-enterprise.com/",
+      },
+      title: t("experiences.0") + " - " + t("alternance"),
+   },
    {
       date: {
          start: { month: "apr", year: 2022 },
