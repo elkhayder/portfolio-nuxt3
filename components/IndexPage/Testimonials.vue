@@ -177,4 +177,8 @@ const NextTestimonial = () => {
          rgba(45, 45, 45, $bgOpacity)
       );
 }
+
+button {
+   @apply rtl:rotate-180;
+}
 </style>

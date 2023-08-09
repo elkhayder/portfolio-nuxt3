@@ -178,15 +178,15 @@ const Experience: TimelineItem[] = [
       },
       title: t("experiences.1") + " - " + t("stage"),
    },
-   {
-      date: {
-         start: { month: "mai", year: 2021 },
-         end: { month: "jan", year: 2022 },
-      },
-      location: t("international"),
-      institution: t("selfEmployed"),
-      title: t("experiences.2"), //+ " - Freelance",
-   },
+   // {
+   //    date: {
+   //       start: { month: "mai", year: 2021 },
+   //       end: { month: "jan", year: 2022 },
+   //    },
+   //    location: t("international"),
+   //    institution: t("selfEmployed"),
+   //    title: t("experiences.2"), //+ " - Freelance",
+   // },
    {
       date: {
          start: { month: "jul", year: 2017 },
