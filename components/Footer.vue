@@ -23,7 +23,7 @@ ar:
                <!-- <a href="https://zelkhayder.me/">@elkhayder</a> -->
                <span class="mx-2">|</span> {{ t("arr") }}
             </span>
-            <div class="flex gap-4">
+            <div class="flex gap-8 items-center">
                <a
                   v-for="x of SocialMediaEntries"
                   target="_blank"
@@ -31,7 +31,8 @@ ar:
                   :title="x.title"
                   class="text-gray-400 hover:text-white"
                >
-                  <i :class="x.icon" class="w-5 h-5" />
+                  <i v-if="!x.custom" :class="x.icon" class="text-base" />
+                  <div v-else v-html="x.icon" class="w-[16px] h-[16px]" />
                </a>
             </div>
          </div>
