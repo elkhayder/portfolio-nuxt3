@@ -6,6 +6,10 @@ en:
 fr:
    title: Projets académiques
    pfe: Projet de fin d'études
+
+ar:
+   title: مشاريع أكاديمية
+   pfe: مشروع نهاية الدراسة
 </i18n>
 <template>
    <section>
