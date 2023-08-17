@@ -1,7 +1,50 @@
+<i18n lang="yaml">
+en:
+   firstname: Firstname
+   lastname: Lastname
+   subject: Subject
+   email: Email
+   message: Message
+   message_placeholder: Your message! express yourself however you please, There is no limit
+   success:
+      - Your message has been sent successfully.
+      - I will get back at you as soon as possible!
+   send_another: Send another message
+   submit: Submit
+
+fr:
+   firstname: Prénom
+   lastname: Nom de famille
+   subject: Sujet
+   email: Adresse e-mail
+   message: Message
+   message_placeholder: Votre message! Exprimez-vous comme bon vous semble, il n'y a pas de limite
+   success:
+      - Votre message a été envoyé avec succès.
+      - Je vous répondrai dès que possible !
+   send_another: Envoyer un autre message
+   submit: Envoyer
+
+ar:
+   firstname: الاسم الشخصي
+   lastname: اسم العائلة
+   subject: الموضوع
+   email: البريد الإلكتروني
+   message: الرسالة
+   message_placeholder: رسالتك! عبِر عن نفسك كما تشاء، ليس هناك حدود
+   success:
+      - تم إرسال رسالتك بنجاح
+      - سأقوم بالرد عليك في أقرب وقت ممكن!
+   send_another: إرسال رسالة أخرى
+   submit: إرسال
+</i18n>
+
 <script setup lang="ts">
 const isSubmitted = ref(false);
 
 const isSubmitting = ref(false);
+
+const { t } = useI18n();
 
 const SubmitForm = async (e: Event) => {
    isSubmitting.value = true;
@@ -37,10 +80,10 @@ const SubmitForm = async (e: Event) => {
    <section>
       <div v-if="isSubmitted" class="mx-auto">
          <p class="text-center font-mono text-sm">
-            Your message has been sent successfully.
+            {{ t("success.0") }}
          </p>
          <p class="text-center font-mono text-sm mt-2">
-            I will get back at you as soon as possible!
+            {{ t("success.1") }}
          </p>
 
          <nuxt-img
@@ -53,7 +96,7 @@ const SubmitForm = async (e: Event) => {
             class="max-w-sm mx-auto block"
             :disabled="isSubmitting"
          >
-            Send another message
+            {{ t("send_another") }}
          </button>
       </div>
       <div v-else class="flex flex-col md:flex-row gap-8 items-center">
@@ -72,7 +115,7 @@ const SubmitForm = async (e: Event) => {
                <!-- Form submission config -->
                <div class="input-group">
                   <div>
-                     <label for="firstname">Firstname</label>
+                     <label for="firstname">{{ t("firstname") }}</label>
                      <input
                         type="text"
                         id="firstname"
@@ -83,7 +126,7 @@ const SubmitForm = async (e: Event) => {
                      />
                   </div>
                   <div>
-                     <label for="lastname">Lastname</label>
+                     <label for="lastname">{{ t("lastname") }}</label>
                      <input
                         type="text"
                         id="lastname"
@@ -95,7 +138,7 @@ const SubmitForm = async (e: Event) => {
                </div>
                <div class="input-group">
                   <div>
-                     <label for="subject">Subject</label>
+                     <label for="subject">{{ t("subject") }}</label>
                      <input
                         type="text"
                         id="subject"
@@ -106,7 +149,7 @@ const SubmitForm = async (e: Event) => {
                      />
                   </div>
                   <div>
-                     <label for="email">Email</label>
+                     <label for="email">{{ t("email") }}</label>
                      <input
                         type="email"
                         id="email"
@@ -118,18 +161,18 @@ const SubmitForm = async (e: Event) => {
                   </div>
                </div>
                <div class="mb-6">
-                  <label for="message">Message</label>
+                  <label for="message">{{ t("message") }}</label>
                   <textarea
                      name="Message"
                      id="message"
                      class="bg-zinc-50 border border-gray-300 text-gray-900 text-sm rounded-md outline-none focus:ring-1 focus:ring-accent-500 focus:border-accent-500 block w-full py-3 px-4 min-"
-                     placeholder="Your message! express yourself however you please, There is no limit."
                      required
+                     :placeholder="t('message_placeholder')"
                      :disabled="isSubmitting"
                   ></textarea>
                </div>
                <button type="submit" :disabled="isSubmitting">
-                  Submit
+                  {{ t("submit") }}
                   <i v-if="isSubmitting" class="fas fa-spinner fa-spin mr-2" />
                </button>
             </form>
