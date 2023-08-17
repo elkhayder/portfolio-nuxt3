@@ -6,6 +6,7 @@ en:
    apr: April
    mai: May
    jan: January
+   intermittent: Intermittent Work
 
 fr:
    sep: Septembre
@@ -14,6 +15,7 @@ fr:
    apr: Avril
    mai: Mai
    jan: Janvier
+   intermittent: Travail Intermittent
 
 ar:
    sep: شتنبر
@@ -22,6 +24,7 @@ ar:
    apr: أبريل
    mai: ماي
    jan: يناير
+   intermittent: عمل متقطع
 </i18n>
 
 <script setup lang="ts">
@@ -33,13 +36,14 @@ type DateItem = {
 type WithLink = string | { text: string; link: string };
 
 export type TimelineItem = {
-   date: {
+   date?: {
       start: DateItem;
       end?: DateItem;
    };
    location: string;
    institution: WithLink;
    title: WithLink;
+   intermittent?: boolean;
 };
 
 defineProps<{ items: TimelineItem[] }>();
@@ -57,13 +61,18 @@ const { t } = useI18n();
             class="mb-2 text-sm font-normal leading-none text-gray-700"
             title="Date"
          >
-            <time>
-               {{ t(item.date.start.month) }} {{ item.date.start.year }}
-            </time>
-            <time v-if="item.date.end">
-               -
-               {{ t(item.date.end.month) }} {{ item.date.end.year }}
-            </time>
+            <template v-if="item.date">
+               <time>
+                  {{ t(item.date.start.month) }} {{ item.date.start.year }}
+               </time>
+               <time v-if="item.date.end">
+                  -
+                  {{ t(item.date.end.month) }} {{ item.date.end.year }}
+               </time>
+            </template>
+            <template v-else-if="item.intermittent">
+               {{ t("intermittent") }}
+            </template>
          </h6>
          <h6
             class="mb-4 text-sm font-normal leading-none text-gray-400"

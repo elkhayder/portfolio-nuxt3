@@ -167,6 +167,12 @@ const Experience: TimelineItem[] = [
       title: t("experiences.0") + " - " + t("alternance"),
    },
    {
+      intermittent: true,
+      location: t("international"),
+      institution: t("selfEmployed"),
+      title: t("experiences.2"), //+ " - Freelance",
+   },
+   {
       date: {
          start: { month: "apr", year: 2022 },
          end: { month: "jun", year: 2022 },
@@ -178,15 +184,6 @@ const Experience: TimelineItem[] = [
       },
       title: t("experiences.1") + " - " + t("stage"),
    },
-   // {
-   //    date: {
-   //       start: { month: "mai", year: 2021 },
-   //       end: { month: "jan", year: 2022 },
-   //    },
-   //    location: t("international"),
-   //    institution: t("selfEmployed"),
-   //    title: t("experiences.2"), //+ " - Freelance",
-   // },
    {
       date: {
          start: { month: "jul", year: 2017 },
