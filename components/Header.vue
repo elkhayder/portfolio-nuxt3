@@ -8,7 +8,7 @@
          class="w-full h-full max-w-6xl mx-auto px-10 flex items-center justify-start md:gap-x-6 lg:gap-x-11 flex-wrap max-md:hidden"
       >
          <NuxtLink
-            class="text-sm lg:text-base h-auto uppercase font-mono font-semibold transition"
+            class="text-xs lg:text-base h-auto uppercase font-mono font-semibold transition"
             :class="{
                'text-gray-600 hover:text-gray-800': isFolded,
                'text-white hover:text-gray-200': !isFolded,
@@ -24,14 +24,14 @@
             target="_blank"
             :href="x.href"
             :title="x.title"
-            class="text-lg"
+            class="text-base"
             :class="{
                'text-gray-600 hover:text-gray-800': isFolded,
                'text-white hover:text-gray-200': !isFolded,
             }"
          >
             <i v-if="!x.custom" :class="x.icon" />
-            <div v-else class="h-[18px] w-[18px]" v-html="x.icon" />
+            <div v-else class="h-[16px] w-[16px]" v-html="x.icon" />
          </NuxtLink>
          <span class="block w-0.5 h-8 bg-gray-400 opacity-50" />
 
@@ -67,7 +67,7 @@
             {{ t(entry.title) }}
             <i class="fas fa-chevron-left text-xs" />
          </NuxtLink>
-         <div class="mt-4">
+         <div class="my-4">
             <NuxtLink
                v-for="x of SocialMediaEntries"
                target="_blank"
@@ -79,7 +79,11 @@
                }"
             >
                <i v-if="!x.custom" :class="x.icon" />
-               <template v-else v-html="x.icon" />
+               <div
+                  v-else
+                  v-html="x.icon"
+                  class="inline-block h-[18px] w-[18px]"
+               />
             </NuxtLink>
          </div>
          <LanguageSwitcher />
@@ -114,6 +118,10 @@ const NavEntries: NavEntry[] = [
    {
       title: "titles.testimonials",
       href: localePath("/") + "#testimonials",
+   },
+   {
+      title: "titles.contact",
+      href: localePath("/") + "#contact",
    },
 ];
 

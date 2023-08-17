@@ -20,7 +20,7 @@ const formSubmitted = computed(() => {
          <div class="w-full md:w-1/2">
             <nuxt-img
                src="/svg/undraw_mailbox.svg"
-               class="w-full max-w-xs mx-auto"
+               class="w-full max-w-[200px] md:max-w-xs mx-auto"
             />
          </div>
          <div class="w-full md:w-1/2">
