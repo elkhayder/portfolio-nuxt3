@@ -4,6 +4,7 @@ const fr = {
       resume: "CV",
       projects: "Projets",
       testimonials: "Témoignages",
+      contact: "Contact",
    },
    countries: {
       ma: "Maroc",

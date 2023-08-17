@@ -24,6 +24,14 @@
    <AcademicProjects />
 
    <IndexPageTestimonials />
+
+   <section class="pb-0 mb-0">
+      <span id="contact" class="anchor" />
+      <h2 class="title">
+         <HackerTitle :title="t('titles.contact')" />
+      </h2>
+   </section>
+   <IndexPageContact />
 </template>
 
 <script setup lang="ts">

@@ -4,6 +4,7 @@ export default {
       resume: "Resume",
       projects: "Projects",
       testimonials: "Testimonials",
+      contact: "Contact",
    },
    name: "EL KHAYDER Zakaria",
    portfolio: "Portfolio",

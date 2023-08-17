@@ -5,10 +5,10 @@
    >
       <!-- Desktop Navbar -->
       <nav
-         class="w-full h-full max-w-6xl mx-auto px-10 flex items-center justify-start gap-x-12 max-lg:gap-x-8 flex-wrap max-md:hidden"
+         class="w-full h-full max-w-6xl mx-auto px-10 flex items-center justify-start md:gap-x-6 lg:gap-x-11 flex-wrap max-md:hidden"
       >
          <NuxtLink
-            class="h-auto uppercase font-mono font-semibold transition"
+            class="text-sm lg:text-base h-auto uppercase font-mono font-semibold transition"
             :class="{
                'text-gray-600 hover:text-gray-800': isFolded,
                'text-white hover:text-gray-200': !isFolded,
@@ -24,13 +24,14 @@
             target="_blank"
             :href="x.href"
             :title="x.title"
-            class="text-lg max-lg:text-base"
+            class="text-lg"
             :class="{
                'text-gray-600 hover:text-gray-800': isFolded,
                'text-white hover:text-gray-200': !isFolded,
             }"
          >
-            <i :class="x.icon" />
+            <i v-if="!x.custom" :class="x.icon" />
+            <div v-else class="h-[18px] w-[18px]" v-html="x.icon" />
          </NuxtLink>
          <span class="block w-0.5 h-8 bg-gray-400 opacity-50" />
 
@@ -77,7 +78,8 @@
                   'ml-8': SocialMediaEntries.indexOf(x),
                }"
             >
-               <i :class="x.icon" />
+               <i v-if="!x.custom" :class="x.icon" />
+               <template v-else v-html="x.icon" />
             </NuxtLink>
          </div>
          <LanguageSwitcher />

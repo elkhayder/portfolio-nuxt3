@@ -4,6 +4,7 @@ export default {
       resume: "السيرة الذاتية",
       projects: "المشاريع",
       testimonials: "الشهادات",
+      contact: "اتصل بي",
    },
    name: "الخيضر زكرياء",
    portfolio: "الموقع الشخصي",
