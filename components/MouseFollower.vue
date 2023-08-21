@@ -5,13 +5,15 @@
       :class="{
          '!opacity-0': isHidden,
          'bg-accent-400 scale-75': isClickable,
+         'bg-red-400 scale-[0.6]': isDisabled,
       }"
    />
    <div
       class="w-2 h-2 bg-accent-400"
       ref="smallRingRef"
       :class="{
-         '!opacity-0': isHidden || isClickable,
+         '!opacity-0': isHidden || isClickable || isDisabled,
+         'bg-red-400': isDisabled,
       }"
    />
 </template>
@@ -20,6 +22,8 @@
 const isHidden = ref<boolean>(true);
 
 const isClickable = ref<boolean>(true);
+
+const isDisabled = ref<boolean>(false);
 
 const bigRingRef = ref<HTMLDivElement>();
 const smallRingRef = ref<HTMLDivElement>();
@@ -51,6 +55,11 @@ const onMouseMove = (e: MouseEvent) => {
       // element.getAttribute("onclick") != null ||
       // element.getAttribute("href") != null ||
       getComputedStyle(element).cursor == "pointer";
+
+   isDisabled.value =
+      element.getAttribute("disabled") != null ||
+      element.getAttribute("aria-disabled") != null ||
+      getComputedStyle(element).cursor == "not-allowed";
 };
 
 onMounted(() => {
