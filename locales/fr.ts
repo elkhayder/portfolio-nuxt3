@@ -8,6 +8,11 @@ const fr = {
    },
    countries: {
       ma: "Maroc",
+      fr: "France",
+      in: "Inde",
+      us: "États-Unis",
+      tn: "Tunisie",
+      hu: "Hongrie",
    },
 };
 

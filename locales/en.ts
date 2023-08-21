@@ -21,5 +21,9 @@ export default {
    countries: {
       ma: "Morocco",
       fr: "France",
+      in: "India",
+      us: "United States",
+      tn: "Tunisia",
+      hu: "Hungary",
    },
 };
