@@ -59,15 +59,15 @@ var touchStartX = 0;
 onMounted(() => {
    ScreenWidth.value = window.innerWidth;
 
-   document.addEventListener("resize", () => {
+   window.addEventListener("resize", () => {
       ScreenWidth.value = window.innerWidth;
    });
 
-   document.addEventListener("orientationchange", () => {
+   window.addEventListener("orientationchange", () => {
       ScreenWidth.value = window.innerWidth;
    });
 
-   document.addEventListener("load", () => {
+   window.addEventListener("load", () => {
       ScreenWidth.value = window.innerWidth;
    });
 
