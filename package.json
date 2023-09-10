@@ -30,6 +30,7 @@
    "dependencies": {
       "@google/model-viewer": "^3.0.2",
       "@vercel/analytics": "^0.1.8",
+      "@vueuse/motion": "^2.0.0",
       "sass": "^1.57.1",
       "sitemap": "^4.1.1",
       "three": "^0.149.0"

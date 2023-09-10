@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t, localeProperties } = useI18n();
+const { t } = useI18n();
 useHead({
    titleTemplate: (title) => `${t(title ?? "portfolio")} - ${t("name")}`,
 });
