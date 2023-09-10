@@ -1,7 +1,6 @@
 import { NuxtConfig } from "nuxt/config";
 
 import { sort as sortPlugin } from "vite-plugin-utils/sort-plugin";
-import dynamicImport from "vite-plugin-dynamic-import";
 import { viteRequire } from "vite-require";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
@@ -9,7 +8,6 @@ export default defineNuxtConfig({
    // css: ["~/assets/css/main.scss"],
    modules: [
       "@nuxt/image-edge",
-      "@nuxt/content",
       "@nuxtjs/i18n",
       ["@funken-studio/sitemap-nuxt-3", { generateOnBuild: true }],
       "@vueuse/nuxt",

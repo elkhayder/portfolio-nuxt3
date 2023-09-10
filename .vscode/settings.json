@@ -1,3 +1,4 @@
 {
-   "cSpell.words": ["charta", "guideme", "Hotspot", "Projets"]
+   "cSpell.words": ["charta", "guideme", "Hotspot", "Projets"],
+   "typescript.tsdk": "node_modules/typescript/lib"
 }

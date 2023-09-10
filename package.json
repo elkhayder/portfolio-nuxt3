@@ -13,7 +13,6 @@
    },
    "devDependencies": {
       "@funken-studio/sitemap-nuxt-3": "^4.0.4",
-      "@nuxt/content": "^2.8.2",
       "@nuxt/image-edge": "1.0.0-rc.1-28239242.b0a8c4a",
       "@nuxtjs/i18n": "8.0.0-rc.4",
       "@nuxtjs/tailwindcss": "^6.8.0",
@@ -33,6 +32,6 @@
       "@vueuse/motion": "^2.0.0",
       "sass": "^1.66.1",
       "sitemap": "^4.1.1",
-      "three": "^0.149.0"
+      "three": "^0.154.0"
    }
 }
