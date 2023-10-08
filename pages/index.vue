@@ -1,5 +1,15 @@
 <i18n lang="yaml"></i18n>
 
+<script setup lang="ts">
+import AcademicProjects from "~~/components/IndexPage/AcademicProjects.vue";
+
+const { t } = useI18n();
+
+useHead({
+   title: t("titles.home"),
+});
+</script>
+
 <template>
    <IndexPageIntroduction />
 
@@ -33,15 +43,5 @@
    </section>
    <IndexPageContact />
 </template>
-
-<script setup lang="ts">
-import AcademicProjects from "~~/components/IndexPage/AcademicProjects.vue";
-
-const { t } = useI18n();
-
-useHead({
-   title: t("titles.home"),
-});
-</script>
 
 <style lang="scss"></style>
