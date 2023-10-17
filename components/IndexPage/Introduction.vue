@@ -9,7 +9,7 @@ en:
    city: Strasbourg, France
 
 fr:
-   subtitle: Developpeur Web, et étudiant en ingenierie des Systèmes électroniques et Embarqués
+   subtitle: Developpeur Web, et étudiant en Ingenierie des Systèmes Embarqués
    phone: Tel
    location: Localisation
    yo: ans
