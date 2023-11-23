@@ -6,7 +6,7 @@ en:
    email: Email
    age: Age
    yo: years old
-   city: Strasbourg, France
+   city: Brest, France
 
 fr:
    subtitle: Developpeur Web, et étudiant en Ingenierie des Systèmes Embarqués
@@ -21,7 +21,7 @@ ar:
    yo: سنة
    email: البريد الإلكتروني
    age: العمر
-   city: ستراسبورغ، فرنسا
+   city: بريست، فرنسا
 </i18n>
 
 <template>
@@ -94,13 +94,13 @@ const info = [
       title: t("age"),
       value: diffYears(new Date(), new Date("2002-12-27")) + " " + t("yo"),
    },
-   {
-      title: t("phone"),
-      value: {
-         text: "+33 745 640961",
-         href: "tel:+33745640961",
-      },
-   },
+   // {
+   //    title: t("phone"),
+   //    value: {
+   //       text: "+33 745 640961",
+   //       href: "tel:+33745640961",
+   //    },
+   // },
    {
       title: t("email"),
       value: {
