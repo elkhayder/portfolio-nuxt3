@@ -267,3 +267,9 @@ export const Rust: LanguageTechnology = {
    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg",
    href: "https://www.rust-lang.org/",
 };
+
+export const Typst: LanguageTechnology = {
+   name: "Typst",
+   image: "https://typst.app/assets/android-chrome-192x192.png",
+   href: "https://typst.app/",
+};

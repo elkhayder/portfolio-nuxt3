@@ -7,6 +7,7 @@ export default defineI18nConfig(() => {
       legacy: false,
       locale: "en",
       fallbackLocale: "en",
+      fallbackRoot: true,
       messages: {
          en,
          fr,

@@ -41,6 +41,7 @@ useHead({
          <HackerTitle :title="t('titles.contact')" />
       </h2>
    </section>
+
    <IndexPageContact />
 </template>
 

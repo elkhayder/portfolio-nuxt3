@@ -144,6 +144,7 @@ import {
    Vercel,
    Netlify,
    Rust,
+   Typst,
 } from "~~/include/languages_technologies";
 
 const { t } = useI18n();
@@ -220,6 +221,7 @@ const SkillEntries: Skill[] = [
       title: t("others"),
       technologies: [
          LaTeX,
+         Typst,
          PhpMyAdmin,
          Cloudflare,
          Vercel,
