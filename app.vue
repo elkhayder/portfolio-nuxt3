@@ -27,10 +27,10 @@ useHead({
    </Head>
 
    <NuxtLayout>
+      <LoadingScreen />
+
       <NuxtPage />
    </NuxtLayout>
-
-   <LoadingScreen />
 
    <LazyClientOnly>
       <MouseFollower />
