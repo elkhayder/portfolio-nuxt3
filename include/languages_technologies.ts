@@ -273,3 +273,9 @@ export const Typst: LanguageTechnology = {
    image: "https://typst.app/assets/android-chrome-192x192.png",
    href: "https://typst.app/",
 };
+
+export const Golang: LanguageTechnology = {
+   name: "Go",
+   image: "https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Aqua.svg",
+   href: "https://go.dev/",
+};
