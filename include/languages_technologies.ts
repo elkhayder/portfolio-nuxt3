@@ -276,6 +276,7 @@ export const Typst: LanguageTechnology = {
 
 export const Golang: LanguageTechnology = {
    name: "Go",
-   image: "https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Aqua.svg",
+   // image: "https://go.dev/blog/go-brand/Go-Logo/SVG/Go-Logo_Aqua.svg",
+   image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg",
    href: "https://go.dev/",
 };
