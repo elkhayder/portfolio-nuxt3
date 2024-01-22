@@ -280,3 +280,9 @@ export const Golang: LanguageTechnology = {
    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg",
    href: "https://go.dev/",
 };
+
+export const VHDL: LanguageTechnology = {
+   name: "VHDL",
+   image: "/icons/vhdl.svg",
+   href: "https://en.wikipedia.org/wiki/VHDL",
+};

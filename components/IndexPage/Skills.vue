@@ -145,7 +145,8 @@ import {
    Netlify,
    Rust,
    Typst,
-   Golang
+   Golang,
+   VHDL
 } from "~~/include/languages_technologies";
 
 const { t } = useI18n();
@@ -198,6 +199,7 @@ const SkillEntries: Skill[] = [
       technologies: [
          CLang,
          CPP,
+         VHDL,
          Golang,
          Linux,
          Arduino,
