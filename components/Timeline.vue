@@ -1,5 +1,6 @@
 <i18n lang="yaml">
 en:
+   aug: August
    sep: September
    jun: June
    jul: July
@@ -9,6 +10,7 @@ en:
    intermittent: Intermittent Work
 
 fr:
+   aug: Août
    sep: Septembre
    jun: Juin
    jul: Juillet
@@ -18,6 +20,7 @@ fr:
    intermittent: Travail Intermittent
 
 ar:
+   aug: غشت
    sep: شتنبر
    jun: يونيو
    jul: يوليوز

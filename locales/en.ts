@@ -17,12 +17,15 @@ export default {
          brest: "Brest",
          nantes: "Nantes",
       },
+      us: {
+         to: "Thousand Oaks, California",
+      },
    },
    countries: {
       ma: "Morocco",
       fr: "France",
       in: "India",
-      us: "United States",
+      us: "United-States of America",
       tn: "Tunisia",
       hu: "Hungary",
    },

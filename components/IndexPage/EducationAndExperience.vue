@@ -20,6 +20,7 @@ en:
       - University diploma of technology (DUT) in Electronics and Industrial IT
       - High School Diploma in Electrical Science and Technology
    experiences:
+      - Network Switching Testing Engineer
       - Real-Time Software Engineer, IA/ML
       - Automation Engineer
       - Full Stack WEB Developer
@@ -43,7 +44,8 @@ fr:
       - Diplôme Universitaire Technique (DUT) en Electronique et Informatique Industrielle
       - Baccalauréat en Science Technique Electrique
    experiences:
-      - Ingénieur logiciel, Informatique temps réel, IA/ML
+      - Ingénieur du Test Réseaux
+      - Ingénieur logiciel temps-réel, IA/ML
       - Automaticien
       - Développeur WEB Full-Stack
       - Spécialiste des réparations informatiques
@@ -70,7 +72,8 @@ ar:
       - دبلوم جامعي تكنولوجي (DUT) في الإلكترونيات وتقنية المعلومات الصناعية
       - شهادة البكالوريا في العلوم والتكنولوجيا الكهربائية
    experiences:
-      - مهندس برمجيات في الوقت الحقيقي، الذكاء الاصطناعي/تعلم الآلة
+      - مهندس اختبار تبديل الشبكة
+      - مهندس برمجيات، الذكاء الاصطناعي
       - مهندس التشغيل الآلي
       - مطور ويب
       - متخصص في إصلاح الحواسيب
@@ -156,15 +159,27 @@ const Education: TimelineItem[] = [
 const Experience: TimelineItem[] = [
    {
       date: {
-         start: { month: "sep", year: 2023 },
-         end: { month: "sep", year: 2026 },
+         start: { month: "jun", year: 2024 },
+         end: { month: "aug", year: 2024 },
       },
-      location: "Brest, France",
+      location: city_country("to", "us"),
       institution: {
          text: "Alcatel-Lucent Enterprise",
          link: "https://www.al-enterprise.com/",
       },
-      title: t("experiences.0") + " - " + t("alternance"),
+      title: t("experiences.0") + " - " + t("stage"),
+   },
+   {
+      date: {
+         start: { month: "sep", year: 2023 },
+         end: { month: "sep", year: 2026 },
+      },
+      location: city_country("brest", "fr"),
+      institution: {
+         text: "Alcatel-Lucent Enterprise",
+         link: "https://www.al-enterprise.com/",
+      },
+      title: t("experiences.1") + " - " + t("alternance"),
    },
    {
       intermittent: true,
@@ -177,7 +192,7 @@ const Experience: TimelineItem[] = [
          start: { month: "apr", year: 2022 },
          end: { month: "jun", year: 2022 },
       },
-      location: t("cities.ma.casablanca") + ", " + t("ma"),
+      location: city_country("casablanca", "ma"),
       institution: {
          text: "Competence Center On Automation",
          link: "https://competence-automation.ma/",
@@ -188,7 +203,7 @@ const Experience: TimelineItem[] = [
       date: {
          start: { month: "jul", year: 2017 },
       },
-      location: t("cities.ma.casablanca") + ", " + t("ma"),
+      location: city_country("casablanca", "ma"),
       institution: "Technomark Maroc",
       title: t("experiences.3") + " - " + t("stage"),
    },
