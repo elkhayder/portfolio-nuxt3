@@ -30,7 +30,7 @@ export const Sass: LanguageTechnology = {
 
 export const TailwindCss: LanguageTechnology = {
    name: "TailwindCss",
-   image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+   image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
    href: "https://tailwindcss.com/",
 };
 
@@ -78,7 +78,7 @@ export const PHP: LanguageTechnology = {
 
 export const Laravel: LanguageTechnology = {
    name: "Laravel",
-   image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg",
+   image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg",
    href: "https://laravel.com/",
 };
 
@@ -264,7 +264,7 @@ export const Netlify: LanguageTechnology = {
 
 export const Rust: LanguageTechnology = {
    name: "Rust",
-   image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg",
+   image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-original.svg",
    href: "https://www.rust-lang.org/",
 };
 
